@@ -1,0 +1,1327 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Box sizing
+# Base
+	- Typography
+	- Link Overrides
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Full Screen Overlay
+	- Sidebar Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+	- Footer
+	- Tabs
+	- Pagination
+# Plugins
+	- SwiperJS
+	- IsotopeJS
+	- Breadcrumbs
+	- TablePress
+# Utilities
+	- Accessibility
+	- Alignments
+# Front Page Template
+	- Statistics
+	- Giving Section
+	- Social Feeds
+	- Magazine
+	- Fields of Study
+	- Hub
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+	@apply font-serif;
+}
+h3,
+h4,
+h5,
+h6,
+.widget h1,
+.widget h2,
+.widget h3,
+.widget h4,
+ul.nav {
+	@apply font-heavy font-bold;
+}
+
+
+/* Sections
+	 ========================================================================== */
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+	background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+.text-shadow {
+	text-shadow: 2px 2px 2px #000;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+	border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+	display: none;
+}
+
+/* Box sizing
+--------------------------------------------- */
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/* Link Overrides
+--------------------------------------------- */
+
+.site-main a,
+.prose a,
+.sidebar-menu h1 a,
+.hub h1 a,
+.magazine-heading h1 a,
+.magazine.features h3 a {
+	@apply text-blue border-grey border-b-2 border-dashed no-underline transition-colors ease-in-out duration-200;
+}
+
+.site-main a:hover,
+.prose a:hover,
+.sidebar-menu h1 a:hover,
+.hub h1 a:hover,
+.magazine-heading h1 a:hover,
+.magazine.features h3 a:hover {
+	@apply text-black border-grey-darkest border-b-2 border-solid;
+}
+
+.custom-logo {
+	@apply object-left object-scale-down h-16 m-6;
+}
+
+/*a.white-text {
+	@apply text-white;
+}
+
+a.black-text {
+	@apply text-black;
+}
+
+a.border-none,
+a.border-none:hover {
+	@apply border-none;
+}*/
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #4a484c;
+	border: 1px solid #d6d6d6;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #2c2c33;
+}
+
+select {
+	border: 1px solid #d6d6d6;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+
+dl dt {
+	@apply font-semi;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+.site-main {
+	@apply pl-4;
+}
+
+@screen lg {
+	.site-main {
+		@apply pl-8;
+	}
+}
+
+.sidebar {
+	@apply pl-4;
+}
+
+@screen lg {
+	.sidebar {
+		@apply pl-1;
+	}
+}
+
+/* Navigation
+--------------------------------------------- */
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.shield {
+	width: 300px;
+}
+
+@screen md {
+	.shield {
+		width: 340px;
+	}
+}
+
+/* Full Screen Overlay
+--------------------------------------------- */
+.site-navigation a:hover {
+	@apply text-grey;
+}
+
+.site-navigation button {
+	@apply p-4 text-white text-lg border-0 bg-secondary;
+	border-radius: 2%;
+}
+
+.site-navigation .main-navigation {
+	@apply flex;
+}
+
+.site-navigation .main-navigation > li {
+	flex: 1 1 25%;
+	@apply font-semi my-8 px-8;
+}
+
+.site-navigation .main-navigation li:nth-last-of-type() {
+	flex: 1 1 auto;
+}
+
+.site-navigation .main-navigation li.external a::after {
+	content: "\ecf6";
+	font-family: 'icomoon', 'gentona-semibold', 'Helvetica Neue', Roboto, sans-serif;
+	font-weight: 300;
+	padding-left: 0.5rem;
+}
+
+.site-navigation .main-navigation li.authenticate a::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f2f6";
+	padding-left: 0.5rem;
+}
+
+
+.site-navigation .main-navigation li a:hover {
+	@apply underline;
+}
+
+.site-navigation .main-navigation li ul.sub-menu li {
+	@apply text-lg mb-1 leading-tight;
+}
+
+.site-navigation .main-navigation li ul.sub-menu li ul.sub-menu {
+	@apply pl-4;
+}
+
+.site-navigation .main-navigation li ul.sub-menu li ul.sub-menu li {
+	@apply mb-0 text-base;
+}
+
+.site-navigation .main-navigation li a.top-level {
+	@apply mt-8 text-xl font-heavy font-bold uppercase;
+}
+
+@media all and (max-width: 767px) {
+	.site-navigation .main-navigation li {
+		flex: 1 1 100%;
+	}
+}
+
+.site-search input[type="text"] {
+	@apply border-none text-grey-darkest;
+}
+
+.overlay {
+	@apply h-0 w-full fixed z-10 top-0 left-0 bg-secondary overflow-y-hidden;
+	transition: 0.5s;
+	-webkit-transform: scale(0);
+    transform: scale(0);
+	opacity: 0;
+	-webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+	transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.overlay.active {
+	display: block;
+	-webkit-transform: scale(1);
+			transform: scale(1);
+	opacity: 1;
+	webkit-animation: anim .3s ease-in-out;
+			animation: anim .3s ease-in-out;
+}
+
+.overlay-content {
+	@apply relative w-full mt-16 top-0;
+}
+
+.overlay .closeBtn {
+@apply absolute top-0 text-3xl ml-12 text-white bg-transparent;
+right: 25px;
+transition: 0.5s;
+-webkit-appearance: none;
+}
+
+@media screen and (max-width: 767px) {
+	.overlay {overflow-y: auto;}
+	.overlay a {font-size: 20px}
+	.overlay .closebtn {
+	font-size: 40px;
+	top: 15px;
+	right: 35px;
+	}
+}
+
+@-webkit-keyframes anim {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+	1% {
+		display: block;
+		opacity: 0;
+		-webkit-transform: scale(0);
+				transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+				transform: scale(1);
+	}
+}
+
+@keyframes anim {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+	1% {
+		display: block;
+		opacity: 0;
+		-webkit-transform: scale(0);
+				transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+				transform: scale(1);
+	}
+}
+
+
+/* Sidebar Navigation
+--------------------------------------------- */
+
+.sidebar-menu ul.nav {
+	@apply mb-8 border-l-2;
+}
+
+.sidebar-menu ul.nav li {
+	@apply pl-4 py-1 text-lg;
+}
+
+.sidebar-menu ul.nav li a {
+	@apply font-heavy font-bold leading-snug;
+}
+
+.sidebar-menu ul.nav li a:hover {
+	@apply text-primary border-grey-darkest border-b-2 border-solid;
+}
+
+.sidebar-menu ul.nav li ul.sub-menu li a {
+	@apply text-base;
+}
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+/*.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}*/
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.blog header h2.entry-title {
+	@apply my-4;
+}
+
+.blog .entry-content {
+	@apply mt-0;
+}
+
+.blog .prose hr {
+	@apply my-4;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+	background: url("../images/blueInWhite_corner1.svg") no-repeat right bottom;
+	background-color: #fefefe;
+	background-size: 2.666666666666667rem auto;
+	border: 0.06667rem solid #002d72;
+	border-bottom: none;
+	box-shadow: 0 0.4rem 0 0 #002d72;
+	padding: 0.75rem;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget h2 {
+	@apply text-xl font-heavy font-bold;
+}
+
+.widget.prose {
+	@apply leading-snug text-base pb-8;
+	font-size: 1rem;
+}
+
+.widget.prose h2 {
+	@apply mb-2;
+}
+
+.widget-title.text-base {
+	@apply text-lg;
+}
+
+.widget.prose ul.nav li a {
+	font-size: 1rem;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+.people .post-thumbnail img {
+	@apply px-8;
+}
+
+.featured-image-area {
+	height: 5rem;
+}
+
+@screen lg {
+	.featured-image-area {
+		height:20rem;
+	}
+}
+
+.featured-image-area .entry-title {
+	@apply text-4xl py-4;
+}
+
+@screen sm {
+	.featured-image-area .entry-title {
+		font-size: 2.5rem;
+	}
+}
+
+@screen md {
+	.featured-image-area .entry-title {
+		@apply text-5xl;
+	}
+}
+
+@screen lg {
+	.featured-image-area .entry-title {
+		font-size: 3.5rem;
+	}
+}
+
+.front-featured-image-area {
+	height: 22rem;
+}
+
+@screen lg {
+	.front-featured-image-area {
+		height:26rem;
+	}
+}
+@media screen and (min-width: 992px) and (max-width:1166px) {
+	.front-featured-image-area h2 {
+		font-size: 2rem;
+	}
+	.front-featured-image-area p {
+		font-size: 1.125rem;
+	}
+	.front-featured-image-area div[role=alert] {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.featured-image {
+		clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%);
+	}
+	.featured-image img
+	{
+		height: 101%;
+	}
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* Footer
+--------------------------------------------- */
+
+.social-media a {
+	@apply pr-4;
+}
+
+/* Tabs
+--------------------------------------------- */
+
+#tabs-id a.active {
+	@apply text-white;
+}
+
+.tabs .tab.active {
+	@apply bg-grey;
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+/* Pagination
+--------------------------------------------- */
+
+ul.page-numbers {
+	@apply flex flex-row py-1 px-2 font-sans justify-center;
+}
+
+ul.page-numbers li {
+	@apply m-4 inline-block;
+}
+
+ul.page-numbers li a.page-numbers {
+	@apply p-2 border-0;
+}
+
+ul.page-numbers li a.page-numbers:hover {
+	@apply bg-grey-lightest;
+}
+
+ul.page-numbers li .page-numbers.current {
+	@apply bg-blue text-white p-2;
+}
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* SwiperJS
+--------------------------------------------- */
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	/* Center slide text vertically */
+	@apply flex justify-center items-center max-w-sm rounded overflow-hidden shadow-lg;
+}
+
+.swiper-slide h3 {
+	@apply font-heavy font-bold text-xl mb-4 mt-2 leading-tight text-secondary flex align-baseline w-48;
+}
+
+.swiper-slide h3:hover {
+	@apply text-black;
+}
+
+.swiper-slide p {
+	@apply leading-tight text-base;
+}
+
+.swiper-pagination {
+	@apply relative mt-4 !important;
+}
+
+/* IsotopeJS // Fields of Study
+--------------------------------------------- */
+.part_time_program .field {
+	box-shadow: inset 0 0 0 6px #c3dcf5;
+}
+.full_time_program .field {
+	box-shadow: inset 0 0 0 6px #68ace5;
+}
+.undergrad_program .field {
+	box-shadow: inset 0 0 0 6px #002d72;
+}
+
+.full_time_program.undergrad_program .field {
+	box-shadow: inset 0 0 0 6px #002d72, inset 0 0 0 12px #68ace5;
+}
+
+.study-fields a.button {
+	@apply font-semi py-2 px-2 mr-4 border-solid border text-center rounded-md;
+}
+
+.site-main .study-fields a {
+	color: inherit;
+}
+
+.study-fields a.all.button, .study-fields a.undergrad.button {
+	@apply text-white;
+}
+
+.study-fields a.all.button:hover, .study-fields a.undergrad.button:hover {
+	@apply text-black;
+}
+
+.study-fields a.undergrad.button.is-checked {
+	@apply bg-white text-blue border-solid border-secondary;
+}
+
+.study-fields a.full-time.button.is-checked {
+	@apply bg-white text-black border-solid border-blue-light;
+}
+
+.study-fields a.part-time.button.is-checked {
+	@apply bg-white text-black border-solid border-blue-lightest;
+}
+
+/* Breadcrumbs
+--------------------------------------------- */
+
+.breadcrumbs {
+	@apply text-grey;
+}
+
+.breadcrumbs span.current-item,
+.breadcrumbs span a {
+	@apply uppercase text-sm border-none mx-4;
+}
+
+.breadcrumbs span.current-item {
+	@apply text-black;
+}
+
+.breadcrumbs span a.home, .breadcrumbs span a.main-home {
+	@apply ml-0;
+}
+
+/* Tablepress
+--------------------------------------------- */
+.tablepress {
+	@apply my-4 !important;
+}
+
+.tablepress tbody td,
+.tablepress tbody th {
+	@apply pt-2 px-3 pb-3 !important;
+}
+
+.tablepress tfoot td,
+.tablepress tfoot th,
+.tablepress thead td,
+.tablepress thead th {
+	@apply font-heavy font-bold pt-2 px-3 pb-3 !important;
+}
+
+.tablepress tfoot th,
+.tablepress thead th {
+	@apply bg-blue-lightest !important;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Front Page Template
+--------------------------------------------------------------*/
+
+/* Statistics
+--------------------------------------------- */
+
+.distinctions {
+	/*background: linear-gradient(90deg, #002d72 0%, #68ace5 100%);*/
+	background-size: cover;
+}
+
+.distinction .icon {
+	display: inline-block;
+}
+
+.distinction .icon img {
+	width: 4.5rem;
+}
+
+.distinction:nth-of-type(odd) h2 {
+	@apply text-white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+.distinction:nth-of-type(even) h2 {
+	@apply text-blue-light;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+/* Giving Section
+--------------------------------------------- */
+
+.giving-section {
+	background: linear-gradient(90deg, #002d72 0%, #68ace5 100%);
+	background: url("../images/homepage-giving-image.jpg") top left no-repeat;
+	background-size: cover;
+	margin-bottom: -5rem;
+}
+
+/* Social Feeds
+--------------------------------------------- */
+#sb_instragram,
+.tiktok-thumb {
+	@apply bg-white shadow-xl rounded-lg;
+}
+
+.tiktok {
+	padding: 0.5rem;
+}
+
+.tiktok .tiktok-thumb {
+	position: relative;
+	overflow: hidden;
+}
+
+.tiktok .tiktok-thumb .image {
+	@apply opacity-100 block w-full h-auto duration-500 ease-in;
+	backface-visibility: hidden;
+}
+
+.tiktok .tiktok-thumb .overlay {
+	@apply absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 duration-500 ease-out bg-blue bg-opacity-75;
+}
+.tiktok-thumb:hover .overlay {
+	opacity: 1;
+}
+.tiktok .tiktok-thumb .overlay .text {
+	@apply text-white text-base absolute text-center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/* Magazine Section
+--------------------------------------------- */
+
+.btn-magazine {
+	@apply bg-white text-secondary border-none py-1 px-2 block font-heavy;
+}
+
+.btn-magazine:hover {
+	@apply text-primary;
+}
+
+@screen lg {
+	.btn-magazine {
+		@apply py-4 px-6;
+	}
+}
+
+.magazine.dean p {
+	@apply text-lg mb-4 leading-relaxed;
+}
+
+.magazine h3 {
+	@apply text-2xl font-heavy font-bold;
+}
+
+.magazine p {
+	@apply leading-tight text-lg;
+}
+
+
+/* Fields of Study Cards
+--------------------------------------------- */
+.front-studyfield-card {
+	@apply flex-shrink-0 m-6 relative overflow-hidden bg-secondary rounded-lg max-w-xs shadow-lg;
+}
+
+.front-studyfield-card:hover {
+	@apply bg-blue-light;
+}
+
+/* Hub
+--------------------------------------------- */
+.hub.news {
+	line-height: 1.5;
+}
+
+.hub.news img {
+	@apply mt-0 mb-2 pt-0 pb-2;
+}
+
+
+.hub p {
+	@apply text-base mb-4;
+}
+
+/* People
+--------------------------------------------- */
+
+.people {
+	@apply mb-8;
+}
