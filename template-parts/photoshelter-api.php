@@ -54,6 +54,9 @@ if ( is_wp_error( $photoshelter_response ) ) {
 		$photoshelter_data->data->Gallery->GalleryImage[0]->ImageLink->link,
 		$photoshelter_data->data->Gallery->GalleryImage[1]->ImageLink->link,
 		$photoshelter_data->data->Gallery->GalleryImage[2]->ImageLink->link,
+		$photoshelter_data->data->Gallery->GalleryImage[3]->ImageLink->link,
+		$photoshelter_data->data->Gallery->GalleryImage[4]->ImageLink->link,
+		$photoshelter_data->data->Gallery->GalleryImage[5]->ImageLink->link,$photoshelter_data->data->Gallery->GalleryImage[6]->ImageLink->link,
 	);
 	$i                 = wp_rand( 0, count( $random_image ) - 1 );
 	$image             = "$random_image[$i]";
