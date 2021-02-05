@@ -14,8 +14,9 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<img src="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_image', true ) ); ?>" alt="<?php the_title(); ?>">
-
+	<?php if ( get_post_meta( $post->ID, 'ecpt_image', true ) ) : ?>
+		<img src="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_image', true ) ); ?>" alt="<?php the_title(); ?>">
+	<?php endif;?>
 	<div class="flex flex-wrap">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_homepage', true ) ) : ?>
 		<div class="pr-4">
@@ -36,7 +37,8 @@
 
 		<?php if ( get_post_meta( $post->ID, 'ecpt_location', true ) ) : ?>
 			<div class="pr-4">
-				<span class="fas fa-map-marker-alt"></span><?php echo esc_html( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>
+				<span class="fas fa-map-marker-alt"></span>
+				<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>
 			</div>
 		<?php endif; ?>
 	</div>
