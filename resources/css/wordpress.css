@@ -504,7 +504,10 @@ dl dt {
 }
 
 @screen lg {
-	.site-main {
+	.flex-row .site-main {
+		@apply pl-4;
+	}
+	.md\:flex-row-reverse .site-main {
 		@apply pl-8;
 	}
 }

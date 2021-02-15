@@ -137,9 +137,10 @@ if (mix.inProduction()) {
 					"page-numbers",
 					/^gsc-/,
 					/^gs-/,
-					/^wp-block-/,
+					/(^wp-block-)\w+/,
 					/^icon-/,
 					"class",
+					/(^c-accordion)\w+/,
 				],
 			})
 		]

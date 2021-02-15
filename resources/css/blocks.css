@@ -74,7 +74,7 @@ a.wp-block-button__link:hover {
 }
 /** === Accordion === */
 .wp-block-pb-accordion-item.c-accordion__item {
-	@apply pb-2;
+	@apply pb-2 w-5/6;
 }
 
 .wp-block-pb-accordion-item.c-accordion__item .c-accordion__title {
