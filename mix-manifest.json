@@ -1,4 +1,10 @@
 {
     "/dist/js/bundle.min.js": "/dist/js/bundle.min.js",
-    "/dist/css/style.css": "/dist/css/style.css"
+    "/dist/css/style.css": "/dist/css/style.css",
+    "/dist/images/blueInWhite_corner1.svg": "/dist/images/blueInWhite_corner1.svg",
+    "/dist/images/homepage-giving-image.jpg": "/dist/images/homepage-giving-image.jpg",
+    "/dist/images/jhu-horizontal.png": "/dist/images/jhu-horizontal.png",
+    "/dist/images/krieger.logo.cropped.svg": "/dist/images/krieger.logo.cropped.svg",
+    "/dist/images/krieger.logo.horizontal.white.svg": "/dist/images/krieger.logo.horizontal.white.svg",
+    "/dist/images/search.png": "/dist/images/search.png"
 }

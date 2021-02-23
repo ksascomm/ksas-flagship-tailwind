@@ -1,5 +1,6 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
+const path = require('path')
 const glob = require("glob-all");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 
@@ -41,8 +42,10 @@ mix
 
 	.postCss(
 		"./resources/css/style.css",
-		"./dist/css/style.css",
-		tailwindcss("./tailwind.config.js")
+		"./dist/css/style.css", [
+			require('tailwindcss')("./tailwind.config.js")
+		]
+
 	)
 
 	// Move images to dist directory
@@ -52,7 +55,7 @@ mix
 	.copyDirectory("resources/fonts", "dist/fonts")
 
 	.options({
-		processCssUrls: false
+		processCssUrls: false,
 	})
 
 	// BrowserSync
