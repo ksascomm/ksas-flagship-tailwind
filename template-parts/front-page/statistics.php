@@ -51,7 +51,7 @@ if ( is_array( $random_distinctions ) ) :
 						</h2>
 						<p class="leading-snug text-3xl font-heavy font-bold text-white tracking-tight"><?php echo esc_html( $distinctions[ $random_distinction ]['statistic_head'] ); ?></p>
 					</div>
-					<div class="absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 transition ease-in duration-200 flex flex-col justify-center bg-grey-lightest hover:opacity-100">
+					<div class="absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 transition ease-in duration-200 flex flex-col justify-center bg-grey-lightest hover:opacity-100 single-distinction" id="<?php echo $distinctions[ $random_distinction ]['statistic_id'] ; ?>">
 						<div class="text-center py-6 px-4">
 							<p class="leading-snug sm:text-xl md:text-lg lg:text-xl font-sans text-black"><?php echo esc_html( $distinctions[ $random_distinction ]['statistic_description'] ); ?></p>
 						</div>
