@@ -142,7 +142,7 @@ add_action( 'widgets_init', 'flagship_tailwind_widgets_init' );
 function flagship_tailwind_scripts() {
 	wp_enqueue_style( 'flagship-tailwind-style', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime( get_template_directory() . '/dist/css/style.css' ), false );
 
-	wp_enqueue_style( 'aos', 'https://unpkg.com/aos@next/dist/aos.css',  array(), '3.0.0', 'all' );
+	wp_enqueue_style( 'aos', 'https://unpkg.com/aos@next/dist/aos.css', array(), '3.0.0', 'all' );
 
 	wp_style_add_data( 'flagship-tailwind-style', 'rtl', 'replace' );
 
@@ -186,17 +186,22 @@ require get_template_directory() . '/inc/pagination.php';
 require get_template_directory() . '/inc/sidebar-walker.php';
 
 /**
+ * Gutenberg Editor
+ */
+require get_template_directory() . '/inc/gutenberg.php';
+
+/**
  * ACF Options Page
  */
 if ( function_exists( 'acf_add_options_page' ) ) {
 
 	acf_add_options_page(
 		array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
+			'page_title' => 'Theme General Settings',
+			'menu_title' => 'Theme Settings',
+			'menu_slug'  => 'theme-general-settings',
+			'capability' => 'edit_posts',
+			'redirect'   => false,
 		)
 	);
 
