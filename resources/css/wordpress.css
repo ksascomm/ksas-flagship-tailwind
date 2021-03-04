@@ -490,6 +490,13 @@ textarea {
 dl dt {
 	@apply font-semi;
 }
+.prose ol {
+	counter-reset: section !important;
+}
+.prose ol > li::before {
+	counter-increment: section !important;
+	content: counter(section) "." !important;
+}
 
 /*--------------------------------------------------------------
 # Layouts
