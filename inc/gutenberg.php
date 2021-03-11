@@ -11,7 +11,40 @@ function ksas_disable_gutenberg_colour_settings() {
 	// Disable custom colors.
 	add_theme_support( 'disable-custom-colors' );
 	// Add foundation color palette to the editor.
-	add_theme_support( 'editor-color-palette' );
+	add_theme_support( 'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'Heritage Blue', 'flagship-tailwind' ),
+				'slug'  => 'heritage-blue',
+				'color'	=> '#002d72',
+			),
+			array(
+				'name'  => __( 'Spirit Blue', 'flagship-tailwind' ),
+				'slug'  => 'blue',
+				'color'	=> '#68ace5',
+			),
+			array(
+				'name'  => __( 'Grey', 'flagship-tailwind' ),
+				'slug'  => 'grey',
+				'color' => '#e5e2e0',
+			),
+			array(
+				'name'  => __( 'Cool Grey', 'flagship-tailwind' ),
+				'slug'  => 'cool',
+				'color' => '#bfccd9',
+			),
+			array(
+				'name'  => __( 'Black', 'flagship-tailwind' ),
+				'slug'  => 'black',
+				'color' => '#31261D',
+			),
+			array(
+				'name'  => __( 'White', 'flagship-tailwind' ),
+				'slug'  => 'white',
+				'color' => '#fefefe',
+			),
+		)
+	);
 
 	// Set normal font size.
 	add_theme_support(
@@ -20,7 +53,7 @@ function ksas_disable_gutenberg_colour_settings() {
 			array(
 				'name'      => __( 'Normal', 'ksasacademic' ),
 				'shortName' => __( 'N', 'ksasacademic' ),
-				'size'      => 16,
+				'size'      => 18,
 				'slug'      => 'normal',
 			),
 		)

@@ -93,3 +93,33 @@ a.wp-block-button__link:hover {
 .prose .c-accordion__content p {
 	@apply my-2;
 }
+
+
+div[class*="wp-block-kadence"] h1,  div[class*="wp-block-kadence"] h2 {
+	@apply font-serif !important;
+}
+
+div[class*="wp-block-kadence"] h3, div[class*="wp-block-kadence"] h4, div[class*="wp-block-kadence"] h5 {
+	@apply font-heavy !important;
+}
+
+div[class*="wp-block-kadence"] p {
+	@apply font-sans !important;
+}
+
+span.kt-blocks-info-box-learnmore {
+	@apply font-semi text-black !important;
+}
+
+a.kt-blocks-info-box-learnmore.info-box-link {
+	@apply font-sans text-blue !important;
+}
+
+.kt-button:hover, .kt-button:focus  {
+	color: #002d72 !important;
+	border-color: #002d72 !important;
+}
+
+a.kt-blocks-info-box-link-wrap {
+	border-style: inherit;
+}
