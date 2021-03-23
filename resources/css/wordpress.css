@@ -26,6 +26,7 @@
 	- IsotopeJS
 	- Breadcrumbs
 	- TablePress
+	- Kadence
 # Utilities
 	- Accessibility
 	- Alignments
@@ -1124,6 +1125,22 @@ ul.page-numbers li .page-numbers.current {
 .tablepress tfoot th,
 .tablepress thead th {
 	@apply bg-blue-lightest !important;
+}
+
+/* Kadence
+--------------------------------------------- */
+.wp-block-kadence-testimonials .kt-testimonial-title, .wp-block-kadence-testimonials .kt-testimonial-name {
+	@apply font-heavy font-bold;
+}
+
+.prose .wp-block-kadence-testimonials .kt-blocks-carousel ul.slick-dots > li::before,
+.prose wp-block-kadence-tabs ul.kt-tabs-title-list > li::before {
+	display: none;
+}
+
+.prose .wp-block-kadence-tabs ul {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
