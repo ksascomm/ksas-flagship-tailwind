@@ -7,3 +7,43 @@
 @import "blocks.css";
 
 @tailwind typography;
+
+
+/*! purgecss start ignore */
+.wp-block-kadence-testimonials .kt-testimonial-title, .wp-block-kadence-testimonials .kt-testimonial-name {
+	@apply font-heavy font-bold !important;
+}
+
+.wp-block-kadence-tabs .kt-title-text,
+.wp-block-kadence-advancedgallery .kadence-blocks-gallery-item__caption {
+	@apply font-semi !important;
+}
+
+.wp-block-kadence-testimonials .kt-testimonial-occupation,
+.wp-block-kadence-testimonials .kt-testimonial-content {
+	@apply font-sans text-black !important;
+}
+
+.wp-block-kadence-testimonials, .wp-block-kadence-tabs {
+	@apply py-4;
+}
+
+.kt-blocks-info-box-learnmore.info-box-link {
+	@apply font-semi text-blue border-0 no-underline transition-colors ease-in-out duration-200 pt-4 !important;
+}
+
+.kt-blocks-info-box-learnmore.info-box-link:hover {
+	@apply text-black border-grey-darkest border-b-2 border-solid !important;
+
+}
+
+.prose .wp-block-kadence-testimonials .kt-blocks-carousel ul.slick-dots > li::before,
+.prose wp-block-kadence-tabs ul.kt-tabs-title-list > li::before {
+	display: none;
+}
+
+.prose .wp-block-kadence-tabs ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+/*! purgecss end ignore */

@@ -112,7 +112,7 @@ span.kt-blocks-info-box-learnmore {
 }
 
 a.kt-blocks-info-box-learnmore.info-box-link {
-	@apply font-sans text-blue !important;
+	@apply font-semi text-blue !important;
 }
 
 .kt-button:hover, .kt-button:focus  {

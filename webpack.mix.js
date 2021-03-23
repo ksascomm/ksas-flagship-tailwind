@@ -138,6 +138,7 @@ if (mix.inProduction()) {
 					"breadcrumbs",
 					"current-item",
 					"page-numbers",
+					"kt-blocks-info-box-learnmore",
 					/^gsc-/,
 					/^gs-/,
 					/(^wp-block-)\w+/,
