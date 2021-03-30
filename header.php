@@ -36,10 +36,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'flagship-tailwind' ); ?></a>
 	<div class="text-center w-full py-2 bg-blue-sky" role="navigation" aria-label="COVID-19 Alerts">
 		<a class="text-white font-heavy font-bold text-lg" href="https://covidinfo.jhu.edu/">COVID-19 information and resources for the Johns Hopkins University community</a>
 	</div>
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'flagship-tailwind' ); ?></a>
 
 	<header id="masthead" class="bg-blue text-white flex flex-col text-center content-center md:flex-row sm:text-left sm:justify-between sm:items-baseline w-full py-4 lg:py-0">
 		<div class="flex flex-col md:flex-row self-center">
