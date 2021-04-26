@@ -15,23 +15,23 @@
     "@tailwindcss/typography": "^0.4.0",
     "aos": "^3.0.0-beta.6",
     "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.11",
-    "swiper": "^6.4.12"
+    "laravel-mix": "^6.0.18",
+    "swiper": "^6.5.8"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^13.0.3",
-    "autoprefixer": "^10.2.4",
+    "@wordpress/scripts": "^14.1.1",
+    "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "browser-sync-webpack-plugin": "^2.3.0",
-    "copy-webpack-plugin": "^7.0.0",
+    "copy-webpack-plugin": "^8.1.1",
     "glob-all": "^3.2.1",
-    "postcss": "^8.2.6",
-    "postcss-loader": "^5.0.0",
-    "purgecss-webpack-plugin": "^4.0.0",
-    "tailwindcss": "^2.0.3",
+    "postcss": "^8.2.13",
+    "postcss-loader": "^5.2.0",
+    "purgecss-webpack-plugin": "^4.0.3",
+    "tailwindcss": "^2.1.2",
     "url-loader": "^4.1.1",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.22.0",
+    "webpack": "^5.35.1",
     "webpack-dev-server": "^3.11.2"
   }
 }
