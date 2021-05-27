@@ -8,7 +8,7 @@
  */
 
 // Get the Feature taxonomy ID.
-$latest_from_dean_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_embed&volume=195&categories=72';
+$latest_from_dean_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_embed&volume=311&categories=72';
 
 if ( false === ( $latest_from_dean = get_transient( 'asmagazine_from_dean_query' ) ) ) {
 	$latest_from_dean = wp_remote_get( $latest_from_dean_url );
