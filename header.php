@@ -45,7 +45,7 @@
 	<header id="masthead" class="bg-blue text-white flex flex-col text-center content-center md:flex-row sm:text-left sm:justify-between sm:items-baseline w-full py-4 lg:py-0">
 		<div class="flex flex-col md:flex-row self-center">
 			<div class="h-auto shield">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Krieger School of Arts & Sciences">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.logo.cropped.svg" class="h-auto w-full p-5" alt="KSAS Shield">
 				</a>
 			</div>

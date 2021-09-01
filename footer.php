@@ -31,7 +31,7 @@
 		<div class="site-info p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
 			<div class="m-2 col-span-4 lg:col-span-1">
 				<div class="">
-					<a href="https://www.jhu.edu/">
+					<a href="https://www.jhu.edu/" aria-label="Johns Hopkins University">
 					<img class="h-auto w-64 self-center" src="<?php echo esc_url( get_template_directory_uri() ); ?>/resources/images/jhu-horizontal.png" alt="Johns Hopkins University">
 					</a>
 				</div>
