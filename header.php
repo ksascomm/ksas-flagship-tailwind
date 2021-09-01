@@ -63,20 +63,22 @@
 					</form>
 				</div>
 			</div>
-			<ul class="flex text-white flex-col md:flex-row" role="navigation" aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>">
-				<li class="flex-grow lg:mr-2">
-					<a href="<?php echo esc_url( site_url( '/academics/departments-programs-and-centers/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Departments & Programs</a>
-				</li>
-				<li class="flex-grow lg:mr-2">
-					<a href="<?php echo esc_url( site_url( '/academics/majors-minors/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Majors & Minors</a>
-				</li>
-				<li class="flex-grow lg:mr-2">
-					<a href="<?php echo esc_url( site_url( '/academics/fields/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Fields of Study</a>
-				</li>
-				<li class="flex-grow lg:mr-2">
-					<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="All Site Links" aria-controls="offCanvasTop1">Menu <span class="fas fa-bars" aria-hidden="true"></span></a>
-				</li>
-			</ul>
+			<div role="navigation">
+				<ul class="flex text-white flex-col md:flex-row" aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>">
+					<li class="flex-grow lg:mr-2">
+						<a href="<?php echo esc_url( site_url( '/academics/departments-programs-and-centers/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Departments & Programs</a>
+					</li>
+					<li class="flex-grow lg:mr-2">
+						<a href="<?php echo esc_url( site_url( '/academics/majors-minors/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Majors & Minors</a>
+					</li>
+					<li class="flex-grow lg:mr-2">
+						<a href="<?php echo esc_url( site_url( '/academics/fields/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Fields of Study</a>
+					</li>
+					<li class="flex-grow lg:mr-2">
+						<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="All Site Links" aria-controls="offCanvasTop1">Menu <span class="fas fa-bars" aria-hidden="true"></span></a>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<!-- .site-branding -->
