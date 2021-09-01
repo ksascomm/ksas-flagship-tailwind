@@ -14,7 +14,7 @@
 <div class="bg-white border-t-4 border-blue rounded-b px-2 md:px-4 py-3 shadow-md mt-12 mb-4" role="alert">
 	<div class="flex">
 		<div>
-			<p class="font-heavy font-bold text-xl">Upcoming Deadlines</p>
+			<p class="font-heavy font-bold text-xl"><?php the_field( 'deadline_heading' ); ?></p>
 			<?php
 			while ( have_rows( 'upcoming_deadline', 807 ) ) :
 				the_row();
