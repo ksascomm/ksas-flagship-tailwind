@@ -75,7 +75,7 @@
 						<a href="<?php echo esc_url( site_url( '/academics/fields/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Fields of Study</a>
 					</li>
 					<li class="flex-grow lg:mr-2">
-						<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="All Site Links" aria-controls="offCanvasTop1">Menu <span class="fas fa-bars" aria-hidden="true"></span></a>
+						<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fas fa-bars" aria-hidden="true"></span></a>
 					</li>
 				</ul>
 			</div>
