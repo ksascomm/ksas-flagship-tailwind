@@ -9,7 +9,7 @@
 
 ?>
 <section class="flex flex-wrap px-5 py-12">
-	<div class="w-full p-4" data-aos="fade-right" data-aos-once="true">
+	<div class="w-full p-4">
 		<div class="grid grid-cols-2 gap-4 divide-x divide-grey-lightest">
 			<div class="col-span-2 lg:col-span-1">
 			<h1 class="sm:text-3xl text-2xl font-serif">KSAS Spotlight</h1>

@@ -37,7 +37,7 @@ if ( is_array( $random_distinctions ) ) :
 		</div>
 		<div class="flex flex-wrap text-center">
 		<?php foreach ( $random_distinctions as $random_distinction ) : ?>
-			<div class="p-4 lg:w-1/4 sm:w-1/2 w-full distinction h-56 relative mb-4" data-aos="fade-down" data-aos-once="true">
+			<div class="p-4 lg:w-1/4 sm:w-1/2 w-full distinction h-56 relative mb-4">
 					<div class="block w-full h-auto">
 						<h2 class="text-5xl font-heavy font-bold">
 							<div class="icon">

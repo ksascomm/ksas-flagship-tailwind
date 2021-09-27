@@ -8,7 +8,7 @@
  */
 
 ?>
-<section class="px-5 py-12" data-aos="fade-in" data-aos-once="true">
+<section class="px-5 py-12">
 	<div class="container mx-auto flex flex-wrap">
 		<div class="flex w-full flex-wrap">
 			<h1 class="sm:text-3xl text-2xl font-serif lg:w-1/3 lg:mb-0 mt-2">Connect with Us</h1>

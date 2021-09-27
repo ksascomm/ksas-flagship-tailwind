@@ -24,7 +24,7 @@
 			<button data-target="panel-6" class="tab btn-magazine">Alumni</button>
 		</nav>
 
-		<div id="panels" data-aos="fade-right" data-aos-once="true">
+		<div id="panels">
 			<div class="panel-1 tab-content active py-5">
 				<div class="grid grid-cols-3 gap-4">
 					<div class="col-span-3 md:col-span-1">

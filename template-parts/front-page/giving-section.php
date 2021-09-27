@@ -27,7 +27,7 @@
 			</g>
 		</g>
 	</svg>
-	<div class="pb-24" data-aos="fade-in" data-aos-once="true">
+	<div class="pb-24">
 		<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-end">
 			<!--Left Col-->
 			<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-white">

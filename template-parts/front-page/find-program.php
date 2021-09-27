@@ -18,7 +18,7 @@
 			Find Your Program. <span class="text-primary">Pursue Your Passions.</span>
 		</h1>
 	</div>
-	<div class="p-4 pb-12 flex flex-wrap items-center justify-center my-0 lg:-my-8" data-aos="fade-down" data-aos-once="true">
+	<div class="p-4 pb-12 flex flex-wrap items-center justify-center my-0 lg:-my-8">
 		<!--Departments-->
 		<div class="front-studyfield-card group">
 			<a href="academics/departments-programs-and-centers/" onclick="ga('send', 'event', 'Fields', 'Homepage', 'Departments');">

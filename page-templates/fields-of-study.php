@@ -12,7 +12,7 @@
 get_header();
 ?>
 <?php get_template_part( 'template-parts/featured-image' ); ?>
-<div class="flex flex-wrap md:flex-row-reverse p-1 sm:p-2 md:p-4" data-aos="fade-in" data-aos-once="true">
+<div class="flex flex-wrap md:flex-row-reverse p-1 sm:p-2 md:p-4">
 	<main id="primary" class="site-main w-full lg:w-4/5">
 		<div class="breadcrumbs mb-4" typeof="BreadcrumbList" vocab="https://schema.org/">
 			<?php
