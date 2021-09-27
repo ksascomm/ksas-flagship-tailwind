@@ -4,7 +4,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
 // import Swiper styles
-import "swiper/swiper-bundle.css";
+import "swiper/css/bundle";
 
 const swiper = new Swiper(".swiper-container", {
 	slidesPerView: 1,
@@ -14,8 +14,8 @@ const swiper = new Swiper(".swiper-container", {
 		// when window width is >= 1200px
 		1200: {
 			slidesPerView: 4,
-			spaceBetween: 30
-		}
+			spaceBetween: 30,
+		},
 	},
 	loop: true,
 	loopFillGroupWithBlank: true,
@@ -23,9 +23,9 @@ const swiper = new Swiper(".swiper-container", {
 	pagination: {
 		el: ".swiper-pagination",
 		type: "bullets",
-		clickable: true
+		clickable: true,
 	},
 	//to work on tabs, below was found from: https://github.com/nolimits4web/swiper/issues/2494#issuecomment-621777516
 	observer: true,
-	observeParents: true
+	observeParents: true,
 });
