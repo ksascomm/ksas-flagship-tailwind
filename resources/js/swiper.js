@@ -1,12 +1,11 @@
 // core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination } from "swiper";
 
-// configure Swiper to use modules
-Swiper.use([Navigation, Pagination]);
 // import Swiper styles
 import "swiper/css/bundle";
 
-const swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".swiper", {
+	modules: [Navigation, Pagination],
 	slidesPerView: 1,
 	spaceBetween: 10,
 	// Responsive breakpoints

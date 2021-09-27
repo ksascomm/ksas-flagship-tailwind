@@ -29,7 +29,7 @@ if ( empty( $student_digest ) ) {
 }
 // If there are posts then display them!
 if ( ! empty( $student_digest ) ) :?>
-	<div class="swiper-container">
+	<div class="swiper">
 		<div class="magazine digest swiper-wrapper" id="digest">
 		<?php foreach ( $student_digest as $digest ) : ?>
 			<div class="swiper-slide hover:bg-blue-lightest">
