@@ -66,7 +66,7 @@ if ( $kiddies ) :
 					'menu_class'     => 'nav',
 					'submenu'        => 'About',
 					'depth'          => 2,
-					'items_wrap'     => '<ul class="%2$s" role="menu" aria-label="Sidebar Menu">%3$s</ul>',
+					'items_wrap'     => '<ul class="%2$s" aria-label="Sidebar Menu">%3$s</ul>',
 				)
 			);
 		?>
