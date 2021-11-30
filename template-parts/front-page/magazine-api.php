@@ -12,12 +12,12 @@
 	<div class="px-5 py-12 container bg-white">
 		<div class="magazine-heading">
 			<h1 class="sm:text-3xl text-2xl font-serif">Arts & Sciences Magazine
-				<small><a href="https://magazine.krieger.jhu.edu/">Spring 2021 Issue</a></small>
+				<small><a href="https://magazine.krieger.jhu.edu/">Fall 2021 Issue</a></small>
 			</h1>
 		</div>
 		<nav class="tabs flex flex-col sm:flex-row">
 			<button data-target="panel-1" class="tab active btn-magazine">Features</button>
-			<button data-target="panel-2" class="tab btn-magazine">Dean's Desktop</button>
+			<button data-target="panel-2" class="tab btn-magazine">From the Dean's Desktop</button>
 			<button data-target="panel-3" class="tab btn-magazine">News</button>
 			<button data-target="panel-4" class="tab btn-magazine">Big Ideas</button>
 			<button data-target="panel-5" class="tab btn-magazine">Student Digest</button>
