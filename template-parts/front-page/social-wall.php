@@ -25,11 +25,6 @@
 			<div class="p-2 md:px-2 w-full">
 				<?php echo do_shortcode( '[instagram-feed]' ); ?>
 			</div>
-			<!--
-			<div class="p-2 md:px-4 w-full md:w-1/2">
-				<?php echo do_shortcode( '[tiktok-feed id="1"]' ); ?>
-			</div>
-			-->
 		</div>
 	</div>
 </section>
