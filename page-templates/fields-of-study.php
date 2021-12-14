@@ -53,8 +53,8 @@ get_header();
 			<div class="flex flex-col md:flex-row" id="filters">
 				<a class="all button bg-primary text-white hover:bg-white hover:text-primary" href="javascript:void(0)" data-filter="*" aria-label="View All Programs">View All</a>
 				<a class="undergrad button bg-secondary text-white hover:bg-white hover:text-secondary" href="javascript:void(0)" data-filter=".undergrad_program" aria-label="Sort Undergraduate Programs">Undergraduate</a>
-				<a class="full-time button bg-blue-light text-primary hover:bg-white hover:text-primary hover:border-blue-light" href="javascript:void(0)" data-filter=".full_time_program" aria-label="Sort Master & Doctorate Programs">Master's & Doctorates</a>
-				<a class="part-time button bg-blue-lightest text-primary hover:bg-white hover:text-primary hover:border-blue-lighest" href="javascript:void(0)" data-filter=".part_time_program" aria-label="Professional Master’s and Certificate Programs">Professional Master’s and Certificates (AAP)</a>
+				<a class="full-time button bg-blue-light text-primary hover:bg-white hover:text-primary hover:border-blue-light" href="javascript:void(0)" data-filter=".full_time_program" aria-label="Sort Master's & Doctorates Programs">Master's & Doctorates</a>
+				<a class="part-time button bg-blue-lightest text-primary hover:bg-white hover:text-primary hover:border-blue-lighest" href="javascript:void(0)" data-filter=".part_time_program" aria-label="Sort Professional Master’s and Certificates (AAP)">Professional Master’s and Certificates (AAP)</a>
 			</div>
 			<h4 class="py-4 text-2xl">
 				<label class="heading" for="id_search">Search our fields of study by keyword:</label>
