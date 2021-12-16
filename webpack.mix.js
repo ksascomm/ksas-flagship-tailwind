@@ -1,6 +1,6 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
-const path = require('path')
+const path = require('path');
 const glob = require("glob-all");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 
@@ -28,7 +28,7 @@ const config = {
   Purge CSS Extractors
   ========================================================================== */
 
-const TailwindExtractor = content => {
+const TailwindExtractor = (content) => {
 	return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
 };
 
@@ -38,11 +38,9 @@ const TailwindExtractor = content => {
 mix
 	// handle JS files
 	.js("resources/js/app.js", "dist/js/bundle.min.js")
-	.disableNotifications()
+	//.disableNotifications()
 
-	.postCss(
-		"./resources/css/style.css",
-		"./dist/css/style.css", [
+	.postCss( "./resources/css/style.css", "./dist/css/style.css", [
 			require('tailwindcss')("./tailwind.config.js")
 		]
 
@@ -87,7 +85,7 @@ if (mix.inProduction()) {
 				},
 
 				output: {
-					comments: false
+					comments: false,
 				},
 
 				exclude: [/\.min\.js$/gi] // skip pre-minified libs

@@ -13,7 +13,7 @@ npm install
 
 ## Build once
 ```bash
-npm run dev
+npm run development
 ```
 
 ## Watch for Changes
@@ -23,5 +23,5 @@ npm run watch
 
 ## Compile & Minify All Theme Assets, Run PurgeCSS
 ```bash
-$ npm run prod
+$ npm run production
 ```

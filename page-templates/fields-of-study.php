@@ -76,7 +76,7 @@ get_header();
 
 			if ( $flagship_studyfields_query->have_posts() ) :
 				?>
-		<section class="text-gray-700 body-font fields-of-study loading"  id="isotope-list" >
+		<section class="fields-of-study loading"  id="isotope-list" >
 
 			<div class="container px-5 py-24 mx-auto">
 				<div class="flex flex-wrap -m-4">

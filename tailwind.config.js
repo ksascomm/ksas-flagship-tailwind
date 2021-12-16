@@ -1,19 +1,35 @@
+const { NoEmitOnErrorsPlugin } = require("webpack");
+
 module.exports = {
-	purge: [
-		"*.php",
-		"template-parts/*.php",
-		"template-parts/*/*.php",
-		"template-parts/*/*/*.php",
-		"page-templates/*.php",
-		"inc/*.php"
+	content: [
+		"./404.php",
+		"./archive.php",
+		"./comments.php",
+		"./footer.php",
+		"./header.php",
+		"./index.php",
+		"./page.php",
+		"./search.php",
+		"./searchform.php",
+		"./sidebar.php",
+		"./single-people.php",
+		"./single-studyfields.php",
+		"./single.php",
+		"./inc/*.php",
+		"./page-templates/*.php",
+		"./resources/js/*.js",
+		"./resources/css/wordpress.css",
+		"./template-parts/*.php",
+		"./template-parts/*/*.php",
+		"./template-parts/*/*/*.php",
 	],
 	theme: {
 		screens: {
-			sm: '640px',
-			md: '768px',
-			lg: '1024px',
-			xl: '1280px',
-			"2xl": '1600px',
+			sm: "36rem",
+			md: "48rem",
+			lg: "62rem",
+			xl: "80rem",
+			"2xl": "100rem",
 		},
 		colors: {
 			primary: "hsl(260 100% 50%)",
@@ -170,8 +186,5 @@ module.exports = {
 	},
 	plugins: [
 		require("@tailwindcss/typography")
-	],
-	variants: {
-		borderWidth: ["responsive", "hover", "focus"]
-	},
+	]
 };

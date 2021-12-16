@@ -45,7 +45,7 @@
 								<?php echo get_the_date( 'j' ); ?>
 								</span>
 							</div>
-							<div class="flex-grow md:pl-6">
+							<div class="grow md:pl-6">
 								<h1 class="text-2xl leading-tight font-heavy font-bold mb-4">
 								<?php if ( get_post_meta( $post->ID, 'ecpt_location', true ) ) : ?>
 									<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>" target="_blank" class="button" title="<?php the_title(); ?>"><?php the_title(); ?></a>
