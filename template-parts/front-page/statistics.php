@@ -41,7 +41,7 @@ if ( is_array( $random_distinctions ) ) :
 					<div class="block w-full h-auto">
 						<h2 class="text-5xl font-heavy font-bold">
 							<div class="icon">
-								<img class="px-2 inline-block text-white fill-current h-auto" src="<?php echo esc_url( $distinctions[ $random_distinction ]['icon']['url'] ); ?>" alt="Icon for <?php
+								<img class="px-2 inline-block text-white fill-white h-auto" src="<?php echo esc_url( $distinctions[ $random_distinction ]['icon']['url'] ); ?>" alt="Icon for <?php
 							echo esc_html( $distinctions[ $random_distinction ]['number'] );
 							?> <?php echo esc_html( $distinctions[ $random_distinction ]['statistic_head'] ); ?>">
 							</div>

@@ -46,7 +46,7 @@ get_header();
 	</section>
 
 	<section class="highlights relative bg-white">
-		<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px;"><svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0"><polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon></svg></div>
+		<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px;"><svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0"><polygon class="text-white fill-white" points="2560 0 2560 100 0 100"></polygon></svg></div>
 		<?php get_template_part( 'template-parts/front-page/magazine-api' ); ?>
 
 		<?php get_template_part( 'template-parts/front-page/giving-section' ); ?>
