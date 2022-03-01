@@ -114,18 +114,29 @@ module.exports = {
 							maxWidth: "110ch",
 							lineHeight: "1.6",
 							fontSize: "1.125rem",
+							'--tw-prose-body': "#31261D",
+							'--tw-prose-bullets': "#31261D",
+							'--tw-prose-headings': "#31261D",
+							'--tw-prose-links': "#002d72",
+							'--tw-prose-bold': "#31261D",
+							'--tw-prose-code': "#31261D",
+							'--tw-prose-pre-code': "#31261D",
+							'--tw-prose-pre-bg': "#f8f8f8",
+							'--tw-prose-quotes': "#31261D",
+							'--tw-prose-counters': "31261D",
 							"ul > li::before": {
-								backgroundColor: "#31261D"
+							  backgroundColor: "#31261D",
 							},
 							"ol > li::before": {
-								backgroundColor: "#fefefe",
-								color: "#31261D"
+							  display: "none",
+							  backgroundColor: "#fefefe",
+							  color: "#31261D",
 							},
 							"ol > li": {
-								display: "flow-root",
+							  display: "list-item",
 							},
 							"ul > li": {
-								display: "flow-root",
+							  display: "list-item",
 							},
 							h1: {
 								marginBottom: "1rem",
