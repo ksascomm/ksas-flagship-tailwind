@@ -156,9 +156,22 @@ function flagship_tailwind_scripts() {
 
 	wp_enqueue_script( 'isotope', 'https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js', array(), '3.0.6', true );
 
+	wp_enqueue_script( 'siteimprove', 'https://siteimproveanalytics.com/js/siteanalyze_11464.js', array(), '1.0.0', true );
+
 	wp_enqueue_script( 'flagship-tailwind-script', get_template_directory_uri() . '/dist/js/bundle.min.js', array( 'jquery' ), FLAGSHIP_TAILWIND_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'flagship_tailwind_scripts' );
+
+/**
+ * Add async attribute to the Siteimprove script.
+ */
+function add_async_to_siteimprove( $tag, $handle, $src ) {
+	if ( 'siteimprove' == $handle ) {
+		return '<script async src="' . $src . '"></script>';
+	}
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'add_async_to_siteimprove', 10, 3 );
 
 /**
  * Custom template tags for this theme.
