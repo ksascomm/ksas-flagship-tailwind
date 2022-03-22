@@ -32,7 +32,7 @@
 			<!--Left Col-->
 			<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-white">
 				<h1 class="my-4 text-2xl pt-4 sm:pt-4 md:pt-0 font-heavy font-bold">Support the Krieger School</h1>
-				<p class="text-xl mt-1 mb-2 leading-snug">The School of Arts & Sciences offers a stellar education that positions its students as the best of the best and trains them to be future leaders. Help us ensure that a Hopkins education is attainable to every deserving student, regardless of financial ability</p>
+				<p class="text-xl mt-1 mb-2">The School of Arts & Sciences offers a stellar education that positions its students as the best of the best and trains them to be future leaders. Help us ensure that a Hopkins education is attainable to every deserving student, regardless of financial ability</p>
 				<button class="mx-auto lg:mx-0 bg-blue text-white font-heavy font-bold my-6 py-2 px-4 hover:bg-blue-light hover:text-primary rounded-md border-none">Find Out More</button>
 			</div>
 		</div>
