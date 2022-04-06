@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<div role="navigation">
-				<ul class="flex text-white flex-col md:flex-row" aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>">
+				<ul id="default-menu" class="flex text-white flex-col md:flex-row" aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>">
 					<li class="grow lg:mr-2">
 						<a href="<?php echo esc_url( site_url( '/academics/departments-programs-and-centers/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Departments & Programs</a>
 					</li>
@@ -89,9 +89,9 @@
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 					'container'      => false,
-					'menu_class'        => 'flex flex-wrap main-navigation overlay-content',
-					//'walker'         => new Aria_Walker_Nav_Menu(),
-					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'menu_class'     => 'flex flex-wrap main-navigation overlay-content',
+					// 'walker'         => new Aria_Walker_Nav_Menu(),
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 				)
 			);
 			?>

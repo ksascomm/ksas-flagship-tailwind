@@ -26,7 +26,7 @@ endif;
 				<?php if ( 'Pre-Med' === $post->post_title ) : ?>
 					<a class="field-text-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				<?php else : ?>
-					<a class="field-text-link" href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>" onclick="ga('send','event','Outgoing Links','<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>')"><?php the_title(); ?></a>
+					<a class="field-text-link" href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>"><?php the_title(); ?></a>
 				<?php endif; ?>
 			</h1>
 			<p class="leading-relaxed mb-3">
