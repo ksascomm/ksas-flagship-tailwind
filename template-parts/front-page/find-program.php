@@ -12,8 +12,8 @@
 	<div class="p-4 flex flex-wrap items-center justify-center w-full">
 		<h1 class="text-3xl sm:text-2xl md:text-4xl font-serif text-secondary">
 			<span class="fa-stack fa-lg hide-for-small-only">
-			<span class="fa fa-circle fa-stack-2x"></span>
-			<span class="far fa-lightbulb fa-stack-1x fa-inverse" aria-hidden="true"></span>
+			<span class="fa-solid fa-circle fa-stack-2x"></span>
+			<span class="fa-regular fa-lightbulb fa-stack-1x fa-inverse" aria-hidden="true"></span>
 			</span>
 			Find Your Program. <span class="text-primary">Pursue Your Passions.</span>
 		</h1>

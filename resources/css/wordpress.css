@@ -580,7 +580,10 @@ dl dt {
 }
 
 .site-navigation .main-navigation li.authenticate a::after {
-	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font: var(--fa-font-solid);
 	font-weight: 900;
 	content: "\f2f6";
 	padding-left: 0.5rem;

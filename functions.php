@@ -150,7 +150,7 @@ function flagship_tailwind_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/ed22ca715b.js', array(), '5.15.1', false );
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.1.1', false );
 
 	wp_enqueue_script( 'google-cse', 'https://cse.google.com/cse.js?cx=012258670098148303364:zptrsb24qaq', array(), FLAGSHIP_TAILWIND_VERSION, false );
 

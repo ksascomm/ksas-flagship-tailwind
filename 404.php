@@ -51,7 +51,7 @@ get_header();
 						<label for="mobile-search" class="screen-reader-text">
 							Search This Website
 						</label>
-						<button type="submit" class="bg-grey-lightest hover:bg-secondary text-primary font-sans hover:text-white py-2 px-4" aria-label="search">Search <span class="fas fa-search"></span></button>
+						<button type="submit" class="bg-grey-lightest hover:bg-secondary text-primary font-sans hover:text-white py-2 px-4" aria-label="search">Search <span class="fa-solid fa-magnifying-glass"></span></button>
 					</form>
 					</li>
 				</ul>

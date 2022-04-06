@@ -31,7 +31,7 @@ endif;
 			</h1>
 			<p class="leading-relaxed mb-3">
 				<?php if ( get_post_meta( $post->ID, 'ecpt_emailaddress', true ) ) : ?>
-					<span class="fas fa-envelope"></span>
+					<span class="fa-solid fa-envelope"></span>
 					<a href="mailto:<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_emailaddress', true ) ); ?>">
 						<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_emailaddress', true ) ); ?>
 					</a>

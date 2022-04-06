@@ -60,12 +60,23 @@ button.gsc-search-button.gsc-search-button-v2 {
 	font-size: 1.25rem;
 }
 
+.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long {
+    display: inherit !important;
+}
+
+.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
+	display: none;
+}
+
 .gs-webResult.gs-result
 	.gsc-url-top
 	.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long::before {
-	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font: var(--fa-font-solid);
 	font-weight: 900;
-	content: "\f0ac";
+	content: "\f57d";
 	font-style: normal;
 	padding-right: 0.4rem;
 }

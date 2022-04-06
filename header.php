@@ -49,14 +49,14 @@
 		</div>
 		<div class="sm:mb-0 self-center text-lg font-sans">
 			<div class="flex flex-col md:flex-row-reverse lg:my-8 lg:px-2">
-				<a class="py-2 px-3 hover:bg-blue-light sm:my-4 md:my-0 text-base text-center" href="/academics/apply/">Admissions <span class="fas fa-university"></span></a>
+				<a class="py-2 px-3 hover:bg-blue-light sm:my-4 md:my-0 text-base text-center" href="/academics/apply/">Admissions <span class="fa-solid fa-landmark-dome"></span></a>
 				<div class="lg:mr-4">
 					<form method="GET" action="<?php echo esc_url( site_url( '/search' ) ); ?>" role="search" aria-label="Site Search" class="bg-white shadow-sm site-search sm:mb-2 lg:mb-0">
 						<input type="text" value="<?php echo get_search_query(); ?>" name="q" class="text-primary pl-2 text-sm" id="mobile-search" placeholder="Search this site" aria-label="search"/>
 						<label for="mobile-search" class="screen-reader-text">
 							Search This Website
 						</label>
-						<button type="submit" class="bg-grey-lightest hover:bg-secondary text-primary text-sm font-sans hover:text-white py-2 px-4 border border-transparent hover:border-solid hover:border-white" aria-label="search">Search <span class="fas fa-search"></span></button>
+						<button type="submit" class="bg-grey-lightest hover:bg-secondary text-primary text-sm font-sans hover:text-white py-2 px-4 border border-transparent hover:border-solid hover:border-white" aria-label="search">Search <span class="fa-solid fa-magnifying-glass"></span></button>
 					</form>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
 						<a href="<?php echo esc_url( site_url( '/academics/fields/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Fields of Study</a>
 					</li>
 					<li class="grow lg:mr-2">
-						<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fas fa-bars" aria-hidden="true"></span></a>
+						<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fa-solid fa-bars" aria-hidden="true"></span></a>
 					</li>
 				</ul>
 			</div>
@@ -82,7 +82,7 @@
 
 
 		<nav class="text-white overlay site-navigation" aria-hidden="true" role="navigation" id="offCanvasTop1">
-			<a href="javascript:void(0)" class="closeBtn" aria-label="Close menu" type="button"><span class="fas fa-window-close"></span></a>
+			<a href="javascript:void(0)" class="closeBtn" aria-label="Close menu" type="button"><span class="fa-solid fa-square-xmark"></span></a>
 			<?php
 			wp_nav_menu(
 				array(

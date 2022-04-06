@@ -43,11 +43,11 @@
 				</ul>
 			</div>
 			<div class="social-media m-4 col-span-4 lg:col-span-1">
-				<a href="https://facebook.com/JHUArtsSciences"><span class="fab fa-facebook-square fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Facebook</span></a>
+				<a href="https://facebook.com/JHUArtsSciences"><span class="fa-brands fa-facebook fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Facebook</span></a>
 				<a href="https://www.instagram.com/JHUArtsSciences/"><span class=" fab fa-instagram fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Instagram</span></a>
-				<a href="https://twitter.com/JHUArtsSciences"><span class="fab fa-twitter fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Twitter</span></a>
-				<a href="https://www.youtube.com/user/jhuksas"><span class="fab fa-youtube fa-2x hover:text-blue-light"></span><span class="screen-reader-text">YouTube</span></a>
-				<a href="https://www.tiktok.com/@jhuartssciences"><span class="fab fa-tiktok fa-2x hover:text-blue-light"></span><span class="screen-reader-text">TikTok</span></a>
+				<a href="https://twitter.com/JHUArtsSciences"><span class="fa-brands fa-twitter fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Twitter</span></a>
+				<a href="https://www.youtube.com/user/jhuksas"><span class="fa-brands fa-youtube fa-2x hover:text-blue-light"></span><span class="screen-reader-text">YouTube</span></a>
+				<a href="https://www.tiktok.com/@jhuartssciences"><span class="fa-brands fa-tiktok fa-2x hover:text-blue-light"></span><span class="screen-reader-text">TikTok</span></a>
 			</div>
 			<div class="col-span-4 my-6">
 				<p class="text-center">&copy; <?php print gmdate( 'Y' ); ?> Johns Hopkins University, <br>Zanvyl Krieger School of Arts & Sciences, <br>3400 N. Charles St, Baltimore, MD 21218</p>

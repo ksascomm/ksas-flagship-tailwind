@@ -20,7 +20,7 @@
 	<div class="flex flex-wrap">
 		<?php if ( get_post_meta( $post->ID, 'ecpt_homepage', true ) ) : ?>
 		<div class="pr-4">
-			<span class="fas fa-globe"></span>
+			<span class="fa-solid fa-earth-americas"></span>
 			<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>" onclick="ga('send','event','Outgoing Links','<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>')">
 				<?php the_title(); ?> Website
 			</a>
@@ -28,7 +28,7 @@
 		<?php endif; ?>
 		<?php if ( get_post_meta( $post->ID, 'ecpt_emailaddress', true ) ) : ?>
 			<div class="pr-4">
-				<span class="fas fa-envelope"></span>
+				<span class="fa-solid fa-envelope"></span>
 				<a href="mailto:<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_emailaddress', true ) ); ?>">
 					<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_emailaddress', true ) ); ?>
 				</a>
@@ -37,7 +37,7 @@
 
 		<?php if ( get_post_meta( $post->ID, 'ecpt_location', true ) ) : ?>
 			<div class="pr-4">
-				<span class="fas fa-map-marker-alt"></span>
+				<span class="fa-solid fa-location-dot"></span>
 				<?php echo esc_html( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>
 			</div>
 		<?php endif; ?>
