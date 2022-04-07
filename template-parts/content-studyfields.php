@@ -21,7 +21,7 @@
 		<?php if ( get_post_meta( $post->ID, 'ecpt_homepage', true ) ) : ?>
 		<div class="pr-4">
 			<span class="fa-solid fa-earth-americas"></span>
-			<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>" onclick="ga('send','event','Field of Study Page','External Link','<?php the_title(); ?> singular page')">
+			<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_homepage', true ) ); ?>" onclick="ga('send','event','Field of Study Page','External Link','<?php the_title(); ?> singular page');">
 				<?php the_title(); ?> Website
 			</a>
 		</div>
