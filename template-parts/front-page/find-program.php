@@ -21,7 +21,7 @@
 	<div class="p-4 pb-12 flex flex-wrap items-center justify-center my-0 lg:-my-8">
 		<!--Departments-->
 		<div class="front-studyfield-card group">
-			<a href="academics/departments-programs-and-centers/" onclick="ga('send', 'event', 'Flagship Homepage', 'Link Click', 'Card: Departments');">
+			<a href="academics/departments-programs-and-centers/">
 				<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 					<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
 					<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
@@ -39,7 +39,7 @@
 		</div>
 		<!--Majors and Minors-->
 		<div class="front-studyfield-card group">
-			<a href="academics/majors-minors/" onclick="ga('send', 'event', 'Flagship Homepage', 'Link Click', 'Card: Majors/Minors');">
+			<a href="academics/majors-minors/">
 				<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 					<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
 					<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
@@ -57,7 +57,7 @@
 		</div>
 		<!--Fields of Study-->
 		<div class="front-studyfield-card group">
-			<a href="academics/fields/#filter=.undergrad_program" data-filter=".undergrad_program" onclick="ga('send', 'event', 'Flagship Homepage', 'Link Click', 'Card: Undergraduate');">
+			<a href="academics/fields/#filter=.undergrad_program" data-filter=".undergrad_program">
 				<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 					<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
 					<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
@@ -75,7 +75,7 @@
 		</div>
 		<!-- Graduate Full-Time-->
 		<div class="front-studyfield-card group">
-			<a href="academics/fields/#filter=.full_time_program" onclick="ga('send', 'event', 'Flagship Homepage', 'Link Click', 'Card: Graduate FT');">
+			<a href="academics/fields/#filter=.full_time_program">
 				<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 					<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
 					<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
@@ -93,7 +93,7 @@
 		</div>
 		<!-- Graduate Part-Time-->
 		<div class="front-studyfield-card group">
-			<a href="academics/fields/#filter=.part_time_program" onclick="ga('send', 'event', 'Flagship Homepage', 'Link Click', 'Card: Graduate PT');">
+			<a href="academics/fields/#filter=.part_time_program">
 				<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 					<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
 					<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
@@ -111,7 +111,7 @@
 		</div>
 		<!-- JHU-->
 		<div class="front-studyfield-card group">
-			<a href="https://www.jhu.edu/academics/" target="_blank" onclick="ga('send', 'event', 'Flagship Homepage', 'Link Click', 'Card: JHU.edu');" rel="noreferrer noopener">
+			<a href="https://www.jhu.edu/academics/" target="_blank" rel="noreferrer noopener">
 				<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 					<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
 					<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
