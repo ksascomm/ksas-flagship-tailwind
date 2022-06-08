@@ -142,8 +142,6 @@ add_action( 'widgets_init', 'flagship_tailwind_widgets_init' );
 function flagship_tailwind_scripts() {
 	wp_enqueue_style( 'flagship-tailwind-style', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime( get_template_directory() . '/dist/css/style.css' ), false );
 
-	wp_enqueue_style( 'aos', 'https://unpkg.com/aos@next/dist/aos.css', array(), '3.0.0', 'all' );
-
 	wp_style_add_data( 'flagship-tailwind-style', 'rtl', 'replace' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
