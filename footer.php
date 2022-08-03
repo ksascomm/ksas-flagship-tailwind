@@ -37,12 +37,12 @@
 				</div>
 			</div>
 			<div class="col-span-4 lg:col-span-2">
-				<ul class="flex m-4 justify-center" role="menu">
+				<ul class="flex m-4 justify-center" role="menu" aria-label="University Policies">
 					<li role="menuitem" class="ml-4 hover:text-blue-light"><a href="https://accessibility.jhu.edu/">Accessibility</a></li>
 					<li role="menuitem" class="ml-4 hover:text-blue-light"><a href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
 				</ul>
 			</div>
-			<div class="social-media m-4 col-span-4 lg:col-span-1">
+			<div class="social-media m-4 col-span-4 lg:col-span-1" aria-label="Social Media Accounts">
 				<a href="https://facebook.com/JHUArtsSciences"><span class="fa-brands fa-facebook fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Facebook</span></a>
 				<a href="https://www.instagram.com/JHUArtsSciences/"><span class=" fab fa-instagram fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Instagram</span></a>
 				<a href="https://twitter.com/JHUArtsSciences"><span class="fa-brands fa-twitter fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Twitter</span></a>
