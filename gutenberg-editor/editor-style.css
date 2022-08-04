@@ -3,12 +3,12 @@ Description: Used to style the content editor in posts and pages
 */
 
 @font-face {
-  font-family: "quadon-bold";
-  src: url("../dist/fonts/quadon/Quadon-Bold.eot");
-  src: url("../dist/fonts/quadon/Quadon-Bold.eot?#iefix")
+  font-family: "quadon-medium";
+  src: url("../dist/fonts/quadon/Quadon-Medium.eot");
+  src: url("../dist/fonts/quadon/Quadon-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("../dist/fonts/quadon/Quadon-Bold.woff") format("woff"),
-    url("../dist/fonts/quadon/Quadon-Bold.ttf") format("truetype");
+    url("../dist/fonts/quadon/Quadon-Medium.woff") format("woff"),
+    url("../dist/fonts/quadon/Quadon-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
