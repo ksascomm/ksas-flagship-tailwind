@@ -39,7 +39,7 @@ if ( empty( $hub_articles ) ) {
 foreach ( $hub_articles['articles'] as $hub_article ) {
 	?>
 	<article class="hub news bg-white shadow-xl rounded-lg" aria-labelledby="post-<?php echo esc_html( $hub_article['id'] ); ?>">
-		<img class="w-full" src="<?php echo esc_html( $hub_article['_embedded']['image_thumbnail'][0]['sizes']['thumbnail'] ); ?>" alt="From The Hub: <?php echo esc_html( $hub_article['headline'] ); ?>" />
+		<img class="w-full" src="<?php echo esc_html( $hub_article['_embedded']['image_thumbnail'][0]['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_html( $hub_article['_embedded']['image_impact'][0]['alt_text'] ); ?>" />
 
 		<h1 class="text-lg leading-tight font-heavy font-bold px-6">
 			<a href="<?php echo esc_url( $hub_article['url'] ); ?>" id="post-<?php echo esc_html( $hub_article['id'] ); ?>"><?php echo esc_html( $hub_article['headline'] ); ?></a>
@@ -47,7 +47,7 @@ foreach ( $hub_articles['articles'] as $hub_article ) {
 		<h2 class="text-sm font-heavy font-bold text-grey-darkest py-1 px-6">
 		<?php
 		$date = $hub_article['publish_date'];
-			echo esc_html( gmdate( 'M j', $date ) );
+			echo esc_html( gmdate( 'M j, Y', $date ) );
 		?>
 		</h2>
 		<p class="pt-1 pb-4 px-6 text-base">

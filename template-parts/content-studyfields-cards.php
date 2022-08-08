@@ -22,7 +22,7 @@ endif;
 <div class="p-2 w-full md:w-1/3 <?php echo esc_html( $program_type_name ); ?> item">
 	<div class="h-full rounded-lg overflow-hidden field">
 		<div class="p-8">
-			<h1 class="title-font text-xl font-heavy font-bold mb-3">
+			<h1 class="text-xl font-heavy font-bold mb-3">
 				<?php if ( 'Pre-Med' === $post->post_title ) : ?>
 					<a class="field-text-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				<?php else : ?>

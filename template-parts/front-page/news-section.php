@@ -31,7 +31,6 @@
 						'full',
 						[
 							'class' => 'h-64 w-full object-cover',
-							'alt'   => get_the_title(),
 						]
 					);
 					?>
@@ -39,18 +38,18 @@
 						<div class="h-full flex items-start">
 							<div class="hidden md:flex w-12 flex-skrink md:flex-shrink-0 flex-col text-center leading-none">
 								<span class="text-primary pb-2 mb-2 border-b-2">
-								<?php echo get_the_date( 'M' ); ?>
+								<?php echo get_the_date( 'M j' ); ?>
 								</span>
-								<span class="font-medium text-xl text-primary title-font">
-								<?php echo get_the_date( 'j' ); ?>
+								<span class="text-primary">
+								<?php echo get_the_date( 'Y' ); ?>
 								</span>
 							</div>
 							<div class="grow md:pl-6">
 								<h1 class="text-2xl leading-tight font-heavy font-bold mb-4">
 								<?php if ( get_post_meta( $post->ID, 'ecpt_location', true ) ) : ?>
-									<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>" target="_blank" class="button" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+									<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>" target="_blank" class="button"><?php the_title(); ?></a>
 								<?php else : ?>
-									<a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+									<a href="<?php the_permalink(); ?>" class="button"><?php the_title(); ?></a>
 								<?php endif; ?>
 								</h1>
 								<?php the_excerpt(); ?>

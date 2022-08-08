@@ -44,21 +44,25 @@ if ( is_front_page() ) {
 	$gallery_id = $interior_id;
 }
 
-$photoshelter_response = wp_remote_get( 'https://www.photoshelter.com/psapi/v3/gallery/' . $gallery_id . '?api_key=2yrk5yDYpec&auth_token=' . $saved_token . '&extend={"GalleryImage":{"fields":"image_id","params":{}},"ImageLink":{"fields":"link,base","params":{"image_mode":"fill","image_size":"1200x400"}}}' );
+$photoshelter_response = wp_remote_get(
+	'https://www.photoshelter.com/psapi/v3/gallery/' . $gallery_id . '?api_key=2yrk5yDYpec&auth_token=' . $saved_token . '&extend={
+	"GalleryImage":{"fields":"image_id","params":{}},
+	"ImageLink":{"fields":"link,base","params":{"image_mode":"fill","image_size":"683x400"}},
+	"Image":{"fields":"image_id","params":{}},
+	"Iptc":{"fields":"caption","params":{}}
+}'
+);
 if ( is_wp_error( $photoshelter_response ) ) {
 	$photoshelter_data = json_decode( wp_remote_retrieve_body( $photoshelter_response ) );
 	echo '<script>console.log("Error:' . $photoshelter_data . '")</script>';
 } else {
-	$photoshelter_data = json_decode( wp_remote_retrieve_body( $photoshelter_response ) );
-	$random_image      = array(
-		$photoshelter_data->data->Gallery->GalleryImage[0]->ImageLink->link,
-		$photoshelter_data->data->Gallery->GalleryImage[1]->ImageLink->link,
-		$photoshelter_data->data->Gallery->GalleryImage[2]->ImageLink->link,
-		$photoshelter_data->data->Gallery->GalleryImage[3]->ImageLink->link,
-		$photoshelter_data->data->Gallery->GalleryImage[4]->ImageLink->link,
-		$photoshelter_data->data->Gallery->GalleryImage[5]->ImageLink->link,$photoshelter_data->data->Gallery->GalleryImage[6]->ImageLink->link,
-	);
-	$i                 = wp_rand( 0, count( $random_image ) - 1 );
-	$image             = "$random_image[$i]";
-};?>
-<img src="<?php echo esc_url( $image ); ?>" alt="Hero Image" class="h-56 w-full object-cover sm:h-72 lg:w-full lg:h-full">
+	$photoshelter_data   = json_decode( wp_remote_retrieve_body( $photoshelter_response ) );
+	$photoshelter_images = $photoshelter_data->data->Gallery->GalleryImage;
+}
+
+$random_photoshelter_image = $photoshelter_images[ array_rand( $photoshelter_images ) ];
+
+if ( ! empty( $random_photoshelter_image ) ) :?>
+		<img src="<?php echo esc_url( $random_photoshelter_image->ImageLink->link, ); ?>" alt="<?php echo esc_html( $random_photoshelter_image->Image->Iptc->caption ); ?>" class="h-56 w-full object-cover sm:h-72 lg:w-full lg:h-full">
+
+<?php endif; ?>

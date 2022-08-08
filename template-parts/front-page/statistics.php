@@ -31,13 +31,13 @@ if ( is_array( $random_distinctions ) ) :
 			</g>
 		</g>
 	</svg>
-	<div class="container mx-auto sm:px-5 lg:px-0 py-12 ">
+	<div class="container mx-auto sm:px-5 lg:px-0 py-12">
 		<div class="flex flex-col text-center w-full mb-4">
 			<h1 class="text-3xl sm:text-4xl md:text-4xl font-serif mb-4 text-white">The Krieger School at a Glance</h1>
 		</div>
 		<div class="flex flex-wrap text-center">
 		<?php foreach ( $random_distinctions as $random_distinction ) : ?>
-			<div class="p-4 lg:w-1/4 sm:w-1/2 w-full distinction h-56 relative mb-4">
+			<div class="p-4 lg:w-1/4 sm:w-1/2 w-full distinction h-56 relative mb-4 focus-within:shadow-lg focus-visible:ring">
 					<div class="block w-full h-auto">
 						<h2 class="text-5xl font-heavy font-bold">
 							<div class="icon">
@@ -51,7 +51,7 @@ if ( is_array( $random_distinctions ) ) :
 						</h2>
 						<p class="text-3xl font-heavy font-bold text-white tracking-tight"><?php echo esc_html( $distinctions[ $random_distinction ]['statistic_head'] ); ?></p>
 					</div>
-					<div class="absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 transition ease-in duration-200 flex flex-col justify-center bg-grey-lightest hover:opacity-100 single-distinction" id="<?php echo $distinctions[ $random_distinction ]['statistic_id']; ?>">
+					<div class="absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 transition ease-in duration-200 flex flex-col justify-center bg-grey-lightest hover:opacity-100 single-distinction" id="<?php echo $distinctions[ $random_distinction ]['statistic_id']; ?>" tabindex="0">
 						<div class="text-center py-6 px-4">
 							<p class="sm:text-xl md:text-lg lg:text-xl font-sans text-black"><?php echo esc_html( $distinctions[ $random_distinction ]['statistic_description'] ); ?></p>
 						</div>
