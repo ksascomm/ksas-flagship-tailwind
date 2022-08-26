@@ -21,7 +21,7 @@
 	<div class="p-4 pb-12 flex flex-wrap items-center justify-center my-0 lg:-my-8">
 		<!--Departments-->
 		<div class="front-studyfield-card group">
-			<a href="academics/departments-programs-and-centers/" aria-label="Departments">
+			<a href="<?php echo esc_url( site_url( '/academics/departments-programs-and-centers/' ) ); ?>" aria-label="Departments">
 				<div class="sr-only">
 				Explore 50-plus departments, programs, centers, and institutes
 				</div>
@@ -42,7 +42,7 @@
 		</div>
 		<!--Majors and Minors-->
 		<div class="front-studyfield-card group">
-			<a href="academics/majors-minors/" aria-label="Majors and Minors">
+			<a href="<?php echo esc_url( site_url( '/academics/majors-minors/' ) ); ?>" aria-label="Majors and Minors">
 				<div class="sr-only">
 				Choose from more than 60 undergraduate majors and minors
 				</div>
@@ -63,7 +63,7 @@
 		</div>
 		<!--Fields of Study-->
 		<div class="front-studyfield-card group">
-			<a href="academics/fields/#filter=.undergrad_program" data-filter=".undergrad_program" aria-label="Undergraduate Programs">
+			<a href="<?php echo esc_url( site_url( '/academics/fields/#filter=.undergrad_program' ) ); ?>" data-filter=".undergrad_program' ) ); ?>" aria-label="Undergraduate Programs">
 				<div class="sr-only">
 				See all Krieger School undergraduate fields of study
 				</div>
@@ -84,7 +84,7 @@
 		</div>
 		<!-- Graduate Full-Time-->
 		<div class="front-studyfield-card group">
-			<a href="academics/fields/#filter=.full_time_program" aria-label="Graduate Full-Time Programs">
+			<a href="<?php echo esc_url( site_url( '/academics/fields/#filter=.full_time_program' ) ); ?>" data-filter=".undergrad_program' ) ); ?>" aria-label="Graduate Full-Time Programs">
 				<div class="sr-only">
 				See all Master's and doctoral programs at the Krieger School
 				</div>
@@ -105,7 +105,7 @@
 		</div>
 		<!-- Graduate Part-Time-->
 		<div class="front-studyfield-card group">
-			<a href="academics/fields/#filter=.part_time_program" aria-label="Graduate Part-Time Programs">
+			<a href="<?php echo esc_url( site_url( '/academics/fields/#filter=.part_time_program' ) ); ?>" data-filter=".undergrad_program' ) ); ?>" aria-label="Graduate Part-Time Programs">
 				<div class="sr-only">
 				Explore the part-time graduate programs from AAP
 				</div>
