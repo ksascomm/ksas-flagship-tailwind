@@ -21,18 +21,22 @@
 	<?php endif; ?>
 		<div class="col-span-3 md:col-span-1">
 			<div class="-mt-2">
-			<?php
-				the_post_thumbnail(
-					array( 450, 250 ),
-					array(
-						'alt' => the_title_attribute(
-							array(
-								'echo' => false,
-							)
-						),
-					)
-				);
+			<?php if ( is_singular( 'people' ) ) : ?>
+				<?php flagship_tailwind_post_thumbnail(); ?>
+			<?php else : ?>
+				<?php
+					the_post_thumbnail(
+						array( 450, 253 ),
+						array(
+							'alt' => the_title_attribute(
+								array(
+									'echo' => false,
+								)
+							),
+						)
+					);
 				?>
+			<?php endif; ?>	
 			</div>
 		</div>
 		<div class="col-span-3 md:col-span-2">
