@@ -21,7 +21,18 @@
 	<?php endif; ?>
 		<div class="col-span-3 md:col-span-1">
 			<div class="-mt-2">
-				<?php flagship_tailwind_post_thumbnail(); ?>
+			<?php
+				the_post_thumbnail(
+					array( 450, 250 ),
+					array(
+						'alt' => the_title_attribute(
+							array(
+								'echo' => false,
+							)
+						),
+					)
+				);
+				?>
 			</div>
 		</div>
 		<div class="col-span-3 md:col-span-2">
