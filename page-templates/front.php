@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-	<div class="flex border-t border-blue hero bg-grey-cool bg-opacity-50 front-featured-image-area h-auto">
+	<div class="flex border-t border-blue hero bg-grey-cool bg-opacity-50 front-featured-image-area h-auto" role="banner">
 		<div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-2/5">
 			<div>
 				<h2 class="text-primary text-3xl md:text-3xl lg:text-4xl font-serif  tracking-tighter">
