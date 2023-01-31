@@ -12,7 +12,7 @@
 	<div class="px-5 py-12 container bg-white">
 		<div class="magazine-heading">
 			<h1 class="sm:text-3xl text-2xl font-serif">Arts & Sciences Magazine
-				<small><a href="https://magazine.krieger.jhu.edu/">Fall 2021 Issue</a></small>
+				<small><a href="https://magazine.krieger.jhu.edu/">Fall 2022 Issue</a></small>
 			</h1>
 		</div>
 		<nav class="tabs flex flex-col sm:flex-row">
