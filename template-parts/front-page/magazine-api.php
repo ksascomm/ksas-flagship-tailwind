@@ -9,7 +9,7 @@
 
 ?>
 <section class="flex flex-wrap" id="tabs-id">
-	<div class="px-5 py-12 container bg-white">
+	<div class="px-5 py-12 container bg-white h-fit mx-auto">
 		<div class="magazine-heading">
 			<h1 class="sm:text-3xl text-2xl font-serif">Arts & Sciences Magazine
 				<small><a href="https://magazine.krieger.jhu.edu/">Fall 2022 Issue</a></small>
