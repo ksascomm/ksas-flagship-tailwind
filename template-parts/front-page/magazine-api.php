@@ -12,14 +12,14 @@
 	<div class="px-5 py-12 container bg-white h-fit mx-auto">
 		<div class="magazine-heading">
 			<h1 class="sm:text-3xl text-2xl font-serif">Arts & Sciences Magazine
-				<small><a href="https://magazine.krieger.jhu.edu/">Fall 2022 Issue</a></small>
+				<small><a href="https://magazine.krieger.jhu.edu/">Spring 2023 Issue</a></small>
 			</h1>
 		</div>
 		<nav class="tabs flex flex-col sm:flex-row">
 			<button data-target="panel-1" class="tab active btn-magazine">Features</button>
 			<button data-target="panel-2" class="tab btn-magazine">From the Dean's Desktop</button>
 			<button data-target="panel-3" class="tab btn-magazine">News</button>
-			<button data-target="panel-4" class="tab btn-magazine">Big Ideas</button>
+			<!--<button data-target="panel-4" class="tab btn-magazine">Big Ideas</button>-->
 			<button data-target="panel-5" class="tab btn-magazine">Student Digest</button>
 			<button data-target="panel-6" class="tab btn-magazine">Alumni</button>
 		</nav>
@@ -41,9 +41,9 @@
 			<div class="panel-3 tab-content py-5">
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-news' ); ?>
 			</div>
-			<div class="panel-4 tab-content py-5">
+			<!--<div class="panel-4 tab-content py-5">
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-ideas' ); ?>
-			</div>
+			</div>-->
 			<div class="panel-5 tab-content py-5">
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-digest' ); ?>
 			</div>

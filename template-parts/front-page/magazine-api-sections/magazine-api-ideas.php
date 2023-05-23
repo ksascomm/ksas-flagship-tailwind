@@ -8,7 +8,7 @@
  */
 
 // Get the Feature taxonomy ID.
-$latest_big_ideas_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=329&categories=70';
+$latest_big_ideas_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=340&categories=70';
 
 if ( false === ( $latest_big_ideas = get_transient( 'asmagazine_big_ideas_query' ) ) ) {
 	$latest_big_ideas = wp_remote_get( $latest_big_ideas_url );

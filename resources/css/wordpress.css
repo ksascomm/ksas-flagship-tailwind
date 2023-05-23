@@ -1024,11 +1024,11 @@ ul.page-numbers li .page-numbers.current {
 
 .swiper-slide {
 	/* Center slide text vertically */
-	@apply flex justify-center items-center max-w-sm rounded overflow-hidden shadow-lg;
+	@apply flex justify-center items-center max-w-sm rounded overflow-hidden shadow-lg !h-auto self-stretch;
 }
 
 .swiper-slide h3 {
-	@apply font-heavy font-bold text-xl mb-4 mt-2 leading-tight text-secondary flex align-baseline w-48;
+	@apply font-heavy font-bold text-xl mb-4 mt-2 leading-tight text-secondary flex align-baseline;
 }
 
 .swiper-slide h3:hover {
@@ -1040,7 +1040,7 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .swiper-pagination {
-	@apply relative mt-4 !important;
+	@apply !relative !mt-8;
 }
 
 /* IsotopeJS // Fields of Study
