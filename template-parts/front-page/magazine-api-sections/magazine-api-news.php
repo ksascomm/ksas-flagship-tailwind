@@ -35,7 +35,7 @@ if ( ! empty( $news ) ) :?>
 				<div class="swiper-slide hover:bg-blue-lightest">
 					<div class="px-6 py-4">
 						<h3><a href="<?php echo esc_url( $new->link ); ?>"><?php echo esc_html( $new->title->rendered ); ?></a></h3>
-						<?php echo $new->excerpt->rendered; ?>
+						<?php echo wp_kses_post( $new->excerpt->rendered ); ?>
 					</div>
 				</div>
 			<?php endforeach; ?>

@@ -346,6 +346,10 @@ template {
 	display: none;
 }
 
+.divide-grey-cool {
+	@apply border-grey-cool;
+}
+
 /* Box sizing
 --------------------------------------------- */
 

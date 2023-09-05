@@ -36,7 +36,7 @@ if ( ! empty( $from_dean ) ) :?>
 						<img class="w-1/2 sm:w-2/3 md:w-3/4 mx-auto" src="<?php echo esc_url( $dean->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->{'full'}->source_url ); ?>" alt="Dean Headshot">
 					</div>
 					<div class="col-span-3 md:col-span-2">
-						<p><?php echo wp_strip_all_tags( $dean->excerpt->rendered ); ?></p>
+						<p><?php echo wp_kses_post( $dean->excerpt->rendered ); ?></p>
 						<p><a class="button bg-secondary text-white hover:bg-blue-light hover:text-primary font-heavy font-bold py-2 px-4 rounded-md" href="<?php echo esc_url( $dean->link ); ?>">More from the Dean</a></p>
 					</div>
 				</div>

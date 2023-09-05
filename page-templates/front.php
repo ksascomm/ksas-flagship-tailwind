@@ -12,7 +12,7 @@ get_header();
 	<div class="flex border-t border-blue hero bg-grey-cool bg-opacity-50 front-featured-image-area h-auto" role="banner">
 		<div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-2/5">
 			<div>
-				<h2 class="text-primary text-3xl md:text-3xl lg:text-4xl font-serif  tracking-tighter">
+				<h1 class="text-primary text-3xl md:text-3xl lg:text-4xl font-serif  tracking-tighter">
 					<?php if ( have_rows( 'heading' ) ) : ?>
 						<?php
 						$repeater = get_field( 'heading' ); // Get the repeater field.
@@ -23,7 +23,7 @@ get_header();
 					<?php else : ?>
 						<?php the_title(); ?>
 					<?php endif; ?>
-				</h2>
+				</h1>
 				<div class="mt-2 text-primary text-lg md:text-xl tracking-tight"><?php the_content(); ?></div>
 				<?php get_template_part( 'template-parts/front-page/upcoming-deadlines' ); ?>
 			</div>
@@ -33,10 +33,11 @@ get_header();
 		</div>
 	</div>
 
-
+<main>
 	<section class="calls-to-action bg-white  border-b-2 border-grey" id="primary">
 		<?php get_template_part( 'template-parts/front-page/find-program' ); ?>
 		<?php get_template_part( 'template-parts/front-page/statistics' ); ?>
+		<?php get_template_part( 'template-parts/front-page/undergraduate' ); ?>
 	</section>
 
 	<section class="interactive relative pb-20 bg-grey-lightest">
@@ -52,6 +53,6 @@ get_header();
 		<?php get_template_part( 'template-parts/front-page/giving-section' ); ?>
 	</section>
 
-
+</main>
 <?php
 get_footer();

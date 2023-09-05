@@ -35,7 +35,7 @@ if ( ! empty( $alumni ) ) :?>
 			<div class="swiper-slide hover:bg-blue-lightest">
 				<div class="px-6 py-4">
 					<h3><a href="<?php echo esc_url( $alum->link ); ?>"><?php echo esc_html( $alum->title->rendered ); ?></a></h3>
-					<?php echo $alum->excerpt->rendered; ?>
+					<?php echo wp_kses_post( $alum->excerpt->rendered ); ?>
 				</div>
 			</div>
 		<?php endforeach; ?>

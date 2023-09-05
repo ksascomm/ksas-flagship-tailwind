@@ -19,7 +19,9 @@
 		</h1>
 	</div>
 	<div class="p-4 pb-12 flex flex-wrap items-center justify-center my-0 lg:-my-8">
+		<ul class="list-none flex flex-wrap items-center justify-center">
 		<!--Departments-->
+		<li>
 		<div class="front-studyfield-card group">
 			<a href="<?php echo esc_url( site_url( '/academics/departments-programs-and-centers/' ) ); ?>">
 				<div class="sr-only">
@@ -40,7 +42,9 @@
 				</div>
 			</a>
 		</div>
+		</li>
 		<!--Majors and Minors-->
+		<li>
 		<div class="front-studyfield-card group">
 			<a href="<?php echo esc_url( site_url( '/academics/majors-minors/' ) ); ?>">
 				<div class="sr-only">
@@ -61,7 +65,9 @@
 				</div>
 			</a>
 		</div>
+		</li>
 		<!--Fields of Study-->
+		<li>
 		<div class="front-studyfield-card group">
 			<a href="<?php echo esc_url( site_url( '/academics/fields/#filter=.undergrad_program' ) ); ?>" data-filter=".undergrad_program' ) ); ?>">
 				<div class="sr-only">
@@ -82,7 +88,9 @@
 				</div>
 			</a>
 		</div>
+		</li>
 		<!-- Graduate Full-Time-->
+		<li>
 		<div class="front-studyfield-card group">
 			<a href="<?php echo esc_url( site_url( '/academics/fields/#filter=.full_time_program' ) ); ?>" data-filter=".undergrad_program' ) ); ?>">
 				<div class="sr-only">
@@ -103,7 +111,9 @@
 				</div>
 			</a>
 		</div>
+		</li>
 		<!-- Graduate Part-Time-->
+		<li>
 		<div class="front-studyfield-card group">
 			<a href="<?php echo esc_url( site_url( '/academics/fields/#filter=.part_time_program' ) ); ?>" data-filter=".undergrad_program' ) ); ?>">
 				<div class="sr-only">
@@ -124,7 +134,9 @@
 				</div>
 			</a>
 		</div>
+		</li>
 		<!-- JHU-->
+		<li>
 		<div class="front-studyfield-card group">
 			<a href="https://www.jhu.edu/academics/" target="_blank" rel="noreferrer noopener">
 				<div class="sr-only">
@@ -145,5 +157,7 @@
 				</div>
 			</a>
 		</div>
+		</li>
+		</ul>
 	</div>
 </div>

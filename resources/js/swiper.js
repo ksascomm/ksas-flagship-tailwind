@@ -1,8 +1,12 @@
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
 // import Swiper styles
-import "swiper/css/bundle";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 
 const swiper = new Swiper(".swiper", {
 	modules: [Navigation, Pagination],
