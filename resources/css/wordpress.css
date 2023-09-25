@@ -51,10 +51,10 @@ html {
     -ms-font-smoothing: antialiased;
 }
 
-h1,
-h2 {
-	@apply font-serif;
+h1 {
+	@apply font-serif font-normal;
 }
+h2,
 h3,
 h4,
 h5,

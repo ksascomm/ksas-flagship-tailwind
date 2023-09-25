@@ -52,10 +52,7 @@ foreach ( $hub_articles['articles'] as $hub_article ) {
 		</h2>
 		<p class="pt-1 pb-4 px-6 text-base">
 			<?php
-			echo esc_html( $hub_article['subheadline'] );
-			if ( empty( $hub_article['subheadline'] ) ) {
-				echo esc_html( $hub_article['excerpt'] );
-			}
+			echo esc_html( $hub_article['excerpt'] );
 			?>
 		</p>
 	</article>
