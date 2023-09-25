@@ -569,7 +569,7 @@ dl dt {
 
 .site-navigation .main-navigation > li {
 	flex: 1 1 25%;
-	@apply font-semi my-8 px-8;
+	@apply font-semi font-semibold my-8 px-8;
 }
 
 .site-navigation .main-navigation li:nth-last-of-type() {

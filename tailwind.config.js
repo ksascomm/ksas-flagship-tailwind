@@ -66,6 +66,13 @@ module.exports = {
 			xl: 2,
 			"2xl": 3,
 		},
+		fontWeight: {
+			light: "300",
+			normal: "400",
+			medium: "500",
+			semibold: "600",
+			bold: "700",
+		},
 		fontFamily: {
 			sans: [
 				"Gentona-Light",
@@ -140,33 +147,46 @@ module.exports = {
 							},
 							h1: {
 								marginBottom: "1rem",
-								color: "#31261D"
+								color: "#31261D",
+								fontWeight: "400",
 							},
 							h2: {
 								marginTop: "0rem",
 								marginBottom: ".5rem",
-								color: "#31261D"
+								color: "#31261D",
+								fontWeight: "400",
 							},
 							h3: {
 								marginTop: "0rem",
 								marginBottom: ".5rem",
 								fontSize: "1.6rem",
-								color: "#31261D"
+								color: "#31261D",
+								fontWeight: "700",
 							},
 							h4: {
 								marginTop: "0rem",
 								marginBottom: ".5rem",
 								color: "#31261D",
-								fontSize: "1.25rem"
+								fontSize: "1.25rem",
+								fontWeight: "700",
+							},
+							h5: {
+								fontWeight: "700",
 							},
 							p: {
 								marginTop: "1rem",
 								marginBottom: "1rem",
+								fontWeight: 300,
 							},
 							li: {
 								marginTop: "0rem",
 								marginBottom: ".25rem",
+								fontWeight: 300,
 							},
+							strong: {
+								fontFamily: "Gentona-Bold, system-ui",
+								fontWeight: 700,
+							  },
 							code: {
 								color: "#31261D"
 							},
@@ -182,7 +202,8 @@ module.exports = {
 							},
 							a: {
 								color: "#002d72",
-								textDecoration: "none"
+								textDecoration: "none",
+								fontWeight: 300,
 							},
 							hr: {
 								marginTop: "1.25rem",

@@ -34,12 +34,12 @@ if ( is_array( $hub_call ) && ! empty( $hub_call['body'] ) ) {
 
 	// Display a warning nothing is returned.
 if ( empty( $hub_articles ) ) {
-	echo '<div class="callout warning"><p>There are no upcoming events</p></div>';
+	echo '<div class="callout warning"><p>There are no relevant stories</p></div>';
 }
 foreach ( $hub_articles['articles'] as $hub_article ) {
 	?>
 	<article class="hub news bg-white shadow-xl rounded-lg" aria-labelledby="post-<?php echo esc_html( $hub_article['id'] ); ?>">
-		<img class="w-full" src="<?php echo esc_html( $hub_article['_embedded']['image_thumbnail'][0]['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_html( $hub_article['_embedded']['image_impact'][0]['alt_text'] ); ?>" />
+		<img class="w-full" src="<?php echo esc_html( $hub_article['_embedded']['image_thumbnail'][0]['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_html( $hub_article['_embedded']['image_thumbnail'][0]['alt_text'] ); ?>" />
 
 		<h1 class="text-lg leading-tight font-heavy font-bold px-6">
 			<a href="<?php echo esc_url( $hub_article['url'] ); ?>" id="post-<?php echo esc_html( $hub_article['id'] ); ?>"><?php echo esc_html( $hub_article['headline'] ); ?></a>
@@ -60,4 +60,4 @@ foreach ( $hub_articles['articles'] as $hub_article ) {
 		</p>
 	</article>
 	<?php } ?>
-	</div>
+</div>

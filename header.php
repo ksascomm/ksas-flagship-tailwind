@@ -42,9 +42,12 @@
 			</div>
 		</div>
 		<div class="sm:mb-0 self-center text-lg font-sans">
-			<div class="flex flex-col md:flex-row-reverse lg:my-8 lg:px-2">
-				<a class="py-2 px-3 hover:bg-blue-light sm:my-4 md:my-0 text-base text-center" href="/academics/apply/">Admissions <span class="fa-solid fa-landmark-dome"></span></a>
-				<div class="lg:mr-4">
+			<div class="flex flex-col justify-end lg:my-6 lg:px-2">
+				<div class="flex justify-end mb-3">
+					<a class="py-2 px-3 hover:bg-blue-light sm:my-4 md:my-0 text-base text-center" href="/academics/apply/">Admissions <span class="fa-solid fa-landmark-dome"></span></a>
+					<a class="py-2 px-3 hover:bg-blue-light sm:my-4 md:my-0 text-base text-center" href="/academics/apply/">Faculty Affairs <span class="fa-solid fa-book-user"></span></a>
+				</div>
+				<div class="flex justify-end">
 					<form method="GET" action="<?php echo esc_url( site_url( '/search' ) ); ?>" role="search" aria-label="Site Search" class="bg-white shadow-sm site-search sm:mb-2 lg:mb-0">
 						<input type="text" value="<?php echo get_search_query(); ?>" name="q" class="text-primary pl-2 text-sm" id="mobile-search" placeholder="Search this site" aria-label="search"/>
 						<label for="mobile-search" class="screen-reader-text">

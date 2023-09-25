@@ -94,7 +94,7 @@ if (mix.inProduction()) {
 				extractors: [
 					{
 						extractor: TailwindExtractor,
-						extensions: ["html", "php", "js", "vue"]
+						extensions: ["html", "php", "js"]
 					}
 				],
 
