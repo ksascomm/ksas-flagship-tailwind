@@ -155,6 +155,7 @@ module.exports = {
 								marginBottom: ".5rem",
 								color: "#31261D",
 								fontWeight: "400",
+								fontSize: "2rem",
 							},
 							h3: {
 								marginTop: "0rem",
