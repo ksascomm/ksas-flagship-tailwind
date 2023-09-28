@@ -28,8 +28,8 @@ if ( is_page() && $post->post_parent ) {
 if ( $kiddies ) :
 	?>
 
-		<div class="sidebar-menu text-blue" aria-labelledby="sidebar-navigation">
-			<h1 class="font-semi text-xl text-black mb-4" id="sidebar-navigation">Also in
+		<div class="sidebar-menu text-blue">
+			<h1 class="font-semi text-xl text-black mb-4">Also in
 			<?php if ( is_home() ) : ?>
 				<a href="<?php echo esc_url( get_home_url() ); ?>/about/" aria-label="Sidebar Menu: About">About</a>
 			<?php else : ?>
