@@ -57,8 +57,8 @@ if ( $kiddies ) :
 	<?php endif; ?>
 
 	<?php if ( is_home() || is_single() && ! is_singular( array( 'studyfields', 'tribe_events', 'people', 'testimonial' ) ) ) : ?>
-		<div class="sidebar-menu text-blue" aria-labelledby="sidebar-navigation">
-			<h1 class="font-semi text-xl text-black mb-4" id="sidebar-navigation">Also in <a href="<?php echo esc_url( get_home_url() ); ?>/about/" aria-label="Sidebar Menu: About">About</a></h1>
+		<div class="sidebar-menu text-blue">
+			<h1 class="font-semi text-xl text-black mb-4">Also in <a href="<?php echo esc_url( get_home_url() ); ?>/about/" aria-label="Sidebar Menu: About">About</a></h1>
 		<?php
 			wp_nav_menu(
 				array(
