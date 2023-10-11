@@ -8,8 +8,8 @@
  */
 
 ?>
-<div class="sidebar-menu text-blue" aria-labelledby="sidebar-navigation">
-	<h1 class="font-semi text-xl text-black mb-4" id="sidebar-navigation">Also in <a href="<?php echo esc_url( get_home_url() ); ?>/academics/" aria-label="Sidebar Menu: Academics">Academics</a></h1>
+<div class="sidebar-menu text-blue">
+	<h1 class="font-semi text-xl text-black mb-4">Also in <a href="<?php echo esc_url( get_home_url() ); ?>/academics/" aria-label="Sidebar Menu: Academics">Academics</a></h1>
 	<?php
 		wp_nav_menu(
 			array(
