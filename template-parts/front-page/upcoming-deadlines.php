@@ -20,7 +20,9 @@
 				the_row();
 				?>
 			<p class="text-lg">
-				<a class="border-grey border-b-2 hover:border-grey-darkest hover:border-b-2 hover:border-solid" href="<?php the_sub_field( 'deadline_link' ); ?>"><?php the_sub_field( 'deadline_title' ); ?>: <?php the_sub_field( 'deadline_date' ); ?></a>
+				<a class="border-grey border-b-2 hover:border-grey-darkest hover:border-b-2 hover:border-solid" href="<?php echo wp_kses_post( get_sub_field( 'deadline_link' ) ); ?>">
+					<?php echo wp_kses_post( get_sub_field( 'deadline_title' ) ); ?>: <?php echo wp_kses_post( get_sub_field( 'deadline_date' ) ); ?>
+				</a>
 			</p>
 			<?php endwhile; ?>
 		</div>
