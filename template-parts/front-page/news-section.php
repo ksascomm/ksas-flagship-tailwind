@@ -13,54 +13,19 @@
 		<div class="grid grid-cols-2 gap-4 divide-x divide-grey-lightest">
 			<div class="col-span-2 lg:col-span-1">
 			<h1 class="sm:text-3xl text-2xl font-serif">KSAS Spotlight</h1>
-			<?php
-			$homepage_query = new WP_Query(
-				array(
-					'post_type'      => 'post',
-					'posts_per_page' => '1',
-				)
-			);
-			if (
-			$homepage_query->have_posts() ) :
-				while ( $homepage_query->have_posts() ) :
-					$homepage_query->the_post();
-					?>
 				<article class="hub news bg-white shadow-xl rounded-lg">
-					<?php
-					the_post_thumbnail(
-						'full',
-						[
-							'class' => 'h-64 w-full object-cover',
-						]
-					);
-					?>
 					<div class="px-6 py-2">
-						<div class="h-full flex items-start">
-							<div class="hidden md:flex w-12 flex-skrink md:flex-shrink-0 flex-col text-center leading-none">
-								<span class="text-primary pb-2 mb-2 border-b-2">
-								<?php echo get_the_date( 'M j' ); ?>
-								</span>
-								<span class="text-primary">
-								<?php echo get_the_date( 'Y' ); ?>
-								</span>
-							</div>
-							<div class="grow md:pl-6">
-								<h1 class="text-2xl leading-tight font-heavy font-bold mb-4">
-								<?php if ( get_post_meta( $post->ID, 'ecpt_location', true ) ) : ?>
-									<a href="<?php echo esc_url( get_post_meta( $post->ID, 'ecpt_location', true ) ); ?>" target="_blank" class="button"><?php the_title(); ?></a>
-								<?php else : ?>
-									<a href="<?php the_permalink(); ?>" class="button"><?php the_title(); ?></a>
-								<?php endif; ?>
-								</h1>
-								<?php the_excerpt(); ?>
-							</div>
+						<div class="video-thumbnail">
+							<a href="https://www.youtube.com/watch?v=lCmH2EFkpkM" target="_blank" rel="noopener" class="text-blue hover:text-blue-light">
+								<img src="https://img.youtube.com/vi/lCmH2EFkpkM/maxresdefault.jpg" alt="Youtube Video thumbnail for First-Year Seminars at Johns Hopkins University Video">
+								<div class="playbutton"></div>
+							</a>
+						</div>
+						<div class="description">
+							<p>Every first-year student at Johns Hopkins enrolls in a <strong class="font-bold font-heavy">First-Year Seminar (FYS)</strong> of their choice. These small, intimate, conversation-focused classes cross academic disciplines, and help students build connections that will serve them for the next four years. Each seminar is unique to the faculty teaching it, but all are discussion-based with embedded experiential learning.</p>
 						</div>
 					</div>
 				</article>
-					<?php
-				endwhile;
-			endif;
-			?>
 			</div>
 			<div class="col-span-2 lg:col-span-1 pl-4">
 				<?php get_template_part( 'template-parts/front-page/hub-api' ); ?>

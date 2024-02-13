@@ -1382,6 +1382,33 @@ ul.page-numbers li .page-numbers.current {
 	@apply text-base mb-4;
 }
 
+
+.hub.news .video-thumbnail {
+	position: relative;
+}
+
+.hub-news video-thumbnail img {
+	padding: .5rem 0;
+	width: 100%;
+  }
+
+.hub.news .video-thumbnail .playbutton::before {
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font: var(--fa-font-light);
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: inherit;
+	text-decoration: inherit;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%,-50%);
+	content: "\f144";
+  }
+
 /* People
 --------------------------------------------- */
 
