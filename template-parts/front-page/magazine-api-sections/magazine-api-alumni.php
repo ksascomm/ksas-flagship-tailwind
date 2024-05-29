@@ -8,7 +8,7 @@
  */
 
 // Get the Feature taxonomy ID.
-	$latest_alumni_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=356&categories=69';
+	$latest_alumni_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=366&categories=69';
 
 if ( false === ( $latest_alumni = get_transient( 'asmagazine_alumni_query' ) ) ) {
 	$latest_alumni = wp_remote_get( $latest_alumni_url );
@@ -29,17 +29,15 @@ if ( empty( $alumni ) ) {
 }
 	// If there are posts then display them!
 if ( ! empty( $alumni ) ) :?>
-	<div class="swiper">
-		<div class="magazine alumnni swiper-wrapper" id="alumni">
+		<div class="magazine alumni grid grid-cols-4 gap-4" id="alumni">
 		<?php foreach ( $alumni as $alum ) : ?>
-			<div class="swiper-slide hover:bg-blue-lightest">
+			<div class="shadow-md rounded hover:bg-blue-lightest">
 				<div class="px-6 py-4">
-					<h3><a href="<?php echo esc_url( $alum->link ); ?>"><?php echo esc_html( $alum->title->rendered ); ?></a></h3>
+					<h3><a class="text-blue hover:text-primary border-grey border-b-2 border-dashed hover:border-grey-darkest hover:border-b-2 hover:border-solid" href="<?php echo esc_url( $alum->link ); ?>"><?php echo esc_html( $alum->title->rendered ); ?></a></h3>
 					<?php echo wp_kses_post( $alum->excerpt->rendered ); ?>
 				</div>
 			</div>
 		<?php endforeach; ?>
 		</div>
-		<div class="swiper-pagination"></div>
 	</div>
 <?php endif; ?>
