@@ -29,7 +29,7 @@ if ( empty( $alumni ) ) {
 }
 	// If there are posts then display them!
 if ( ! empty( $alumni ) ) :?>
-		<div class="magazine alumni grid grid-cols-4 gap-4" id="alumni">
+		<div class="magazine alumni grid grid-cols-1 md:grid-cols-4 gap-4" id="alumni">
 		<?php foreach ( $alumni as $alum ) : ?>
 			<div class="shadow-md rounded hover:bg-blue-lightest">
 				<div class="px-6 py-4">

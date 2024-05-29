@@ -29,7 +29,7 @@ if ( empty( $oncampus ) ) {
 }
 	// If there are posts then display them!
 if ( ! empty( $oncampus ) ) :?>
-		<div class="magazine oncampus grid grid-cols-4 gap-4" id="oncampus">
+		<div class="magazine oncampus grid grid-cols-1 md:grid-cols-4 gap-4" id="oncampus">
 		<?php foreach ( $oncampus as $campus ) : ?>
 			<div class="shadow-md rounded hover:bg-blue-lightest">
 				<div class="px-6 py-4">

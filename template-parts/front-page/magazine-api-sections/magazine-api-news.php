@@ -30,7 +30,7 @@ if ( empty( $news ) ) {
 // If there are posts then display them!
 if ( ! empty( $news ) ) :?>
 
-		<div class="magazine news grid grid-cols-4 gap-4" id="news">
+		<div class="magazine news grid grid-cols-1 md:grid-cols-4 gap-4" id="news">
 			<?php foreach ( $news as $new ) : ?>
 				<div class="shadow-md rounded hover:bg-blue-lightest">
 					<div class="px-6 py-4">
