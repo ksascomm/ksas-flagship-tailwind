@@ -1349,11 +1349,11 @@ ul.page-numbers li .page-numbers.current {
 }
 
 .magazine h3 {
-	@apply text-2xl font-heavy font-bold;
+	@apply text-2xl font-heavy font-bold mb-2 leading-normal;
 }
 
 .magazine p {
-	@apply leading-tight text-lg;
+	@apply leading-tight text-lg mb-2;
 }
 
 
