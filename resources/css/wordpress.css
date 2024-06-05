@@ -1330,12 +1330,16 @@ ul.page-numbers li .page-numbers.current {
 /* Magazine Section
 --------------------------------------------- */
 
-.btn-magazine {
-	@apply bg-white text-secondary border-none py-1 px-2 block font-heavy;
+.tabs button[role="tab"][aria-selected="true"] {
+	@apply text-primary bg-grey;
 }
 
-.btn-magazine:hover {
-	@apply text-primary;
+.tabs button:hover {
+	@apply bg-grey-lightest;
+}
+
+.btn-magazine {
+	@apply  text-secondary border-none py-1 px-2 font-heavy;
 }
 
 @screen lg {

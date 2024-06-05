@@ -3,6 +3,5 @@
   ========================================================================== */
 
 import "./navigation.js";
-import "./swiper.js";
 import "./isotope.js";
-//import "./aos.js";
+import "./tabs.js";

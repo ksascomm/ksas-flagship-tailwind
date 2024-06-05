@@ -15,17 +15,17 @@
 				<small><a href="https://magazine.krieger.jhu.edu/">Spring 2024 Issue</a></small>
 			</h1>
 		</div>
-		<nav class="tabs flex flex-col sm:flex-row">
-			<button data-target="panel-1" class="tab active btn-magazine">Features</button>
-			<button data-target="panel-2" class="tab btn-magazine">News</button>
-			<button data-target="panel-3" class="tab btn-magazine">Research</button>
-			<button data-target="panel-4" class="tab btn-magazine">Faculty</button>
-			<button data-target="panel-5" class="tab btn-magazine">Student Research</button>
-			<button data-target="panel-6" class="tab btn-magazine">On Campus</button>
-			<button data-target="panel-7" class="tab btn-magazine">Alumni</button>
-		</nav>
-		<div id="panels">
-			<div class="panel-1 tab-content active py-5">
+		<div class="tabs">
+			<div role="tablist" aria-label="Magazine Tabs" class="flex flex-col sm:flex-row mb-4">
+				<button role="tab" aria-controls="panel-1"  aria-selected="true" id="tab-1" tabindex="0" class="btn-magazine">Features</button>
+				<button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1" class="btn-magazine">News</button>
+				<button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1" class="btn-magazine">Research</button>
+				<button role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" tabindex="-1" class="btn-magazine">Faculty</button>
+				<button role="tab" aria-selected="false" aria-controls="panel-5" id="tab-5" tabindex="-1" class="btn-magazine">Student Research</button>
+				<button role="tab" aria-selected="false" aria-controls="panel-6" id="tab-6" tabindex="-1" class="btn-magazine">On Campus</button>
+				<button role="tab" aria-selected="false" aria-controls="panel-7" id="tab-7" tabindex="-1" class="btn-magazine">Alumni</button>
+			</div>
+			<div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
 				<div class="grid grid-cols-3 gap-4">
 					<div class="col-span-3 md:col-span-1">
 						<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-cover' ); ?>
@@ -35,22 +35,22 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-2 tab-content py-5">
+			<div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-news' ); ?>
 			</div>
-			<div class="panel-3 tab-content py-5">
+			<div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-research' ); ?>
 			</div>
-			<div class="panel-4 tab-content py-5">
+			<div id="panel-4" role="tabpanel" tabindex="0" aria-labelledby="tab-4" hidden>
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-faculty' ); ?>
 			</div>
-			<div class="panel-5 tab-content py-5">
+			<div id="panel-5" role="tabpanel" tabindex="0" aria-labelledby="tab-5" hidden>
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-digest' ); ?>
 			</div>
-			<div class="panel-6 tab-content py-5">
+			<div id="panel-6" role="tabpanel" tabindex="0" aria-labelledby="tab-6" hidden>
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-classroom' ); ?>
 			</div>
-			<div class="panel-7 tab-content py-5">
+			<div id="panel-7" role="tabpanel" tabindex="0" aria-labelledby="tab-7" hidden>
 				<?php get_template_part( 'template-parts/front-page/magazine-api-sections/magazine-api-alumni' ); ?>
 			</div>
 		</div>
