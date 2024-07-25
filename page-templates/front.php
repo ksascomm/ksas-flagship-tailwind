@@ -29,7 +29,17 @@ get_header();
 			</div>
 		</div>
 		<div class="hidden lg:block lg:w-3/5 front featured-image">
-			<?php get_template_part( 'template-parts/photoshelter-api' ); ?>
+		<?php if ( have_rows( 'homepage_hero_images' ) ) : ?>
+				<?php
+				$random_images = get_field( 'homepage_hero_images' );
+				shuffle( $random_images );
+				// print("<pre>".print_r($random_images,true)."</pre>");
+				$random_img_url   = $random_images[0]['homepage_hero_image']['url'];
+				$random_img_alt   = $random_images[0]['homepage_hero_image']['alt'];
+				$random_img_title = $random_images[0]['homepage_hero_image']['title'];
+				?>
+				<img class="h-56 w-full object-cover sm:h-72 lg:w-full lg:h-full slide-<?php echo esc_html( $random_img_title ); ?>" src="<?php echo esc_url( $random_img_url ); ?>" alt="<?php echo esc_html( $random_img_alt ); ?>" />
+			<?php endif; ?>
 		</div>
 	</div>
 
