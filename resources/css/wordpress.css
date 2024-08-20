@@ -650,7 +650,7 @@ dl dt {
 }
 
 .overlay .closeBtn {
-@apply absolute top-0 text-3xl ml-12 text-white bg-transparent;
+@apply absolute top-0 text-3xl ml-12 text-white bg-transparent  border-transparent active:bg-blue-light focus:outline-none focus:ring focus:ring-blue-light;
 right: 25px;
 transition: 0.5s;
 -webkit-appearance: none;

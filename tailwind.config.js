@@ -47,6 +47,7 @@ module.exports = {
 			"blue-light": "#68ace5",
 			"blue-lightest": "#c3dcf5",
 			"blue-sky": "#418fde",
+			"blue-royal": "#0072ce",
 		},
 		fontSize: {
 			sm: ".875rem",
@@ -82,11 +83,8 @@ module.exports = {
 				"Segoe UI",
 				"sans-serif"
 			],
-			serif: [
-				"Quadon",
-				"Georgia",
-				"serif"
-			],
+			serif: ["quadon-medium", "Georgia", "serif"],
+			serifBold: ["quadon-bold", "Georgia", "serif"],
 			mono: [
 				"Menlo",
 				"Monaco",

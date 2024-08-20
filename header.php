@@ -66,7 +66,7 @@
 						<a href="<?php echo esc_url( site_url( '/academics/fields/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Fields of Study</a>
 					</li>
 					<li class="grow lg:mr-2">
-						<a href="#" class="text-center block openSideNav hover:bg-blue-light py-2 px-4" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fa-solid fa-bars"></span></a>
+						<button class="text-center block openSideNav hover:bg-blue-light py-2 px-4 border-transparent  active:bg-blue-light focus:outline-none focus:ring focus:ring-blue-light hover:border-transparent" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fa-solid fa-bars"></span></button>
 					</li>
 				</ul>
 			</div>
@@ -76,7 +76,7 @@
 
 
 		<nav class="text-white overlay site-navigation" role="navigation" id="offCanvasTop1">
-			<a href="javascript:void(0)" class="closeBtn" aria-label="Close menu" type="button"><span class="fa-solid fa-square-xmark"></span></a>
+			<button class="closeBtn" aria-label="Close menu" type="button"><span class="fa-solid fa-square-xmark"></span></button>
 			<?php
 			wp_nav_menu(
 				array(
