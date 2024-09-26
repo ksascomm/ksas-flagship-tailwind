@@ -1,121 +1,137 @@
 /**
- * File isotope.js.
+ * File isotope.js
  *
  * Customized isotope script for Fields of Study Page
  */
 
- jQuery(document).ready(function($) {
-	// initially hide noresult box on page load
-	$("#noResult").hide();
+jQuery(document).ready(function($) {
+    // initially hide noresult box on page load
+    $("#noResult").hide();
 
-	var qsRegex;
-	var hashFilter;
+    // Initialize Isotope
+    var $grid = $('#isotope-list').isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+    });
 
-	// init Isotope
-	var $grid = $("#isotope-list").isotope({
-		itemSelector: ".item",
-		layoutMode: "fitRows",
-		filter: function() {
-			var $this = $(this);
-			var searchResult = qsRegex ? $this.text().match(qsRegex) : true;
-			var hashResult = hashFilter ? $this.is(hashFilter) : true;
-			return searchResult && hashResult;
-		}
-	});
+    var qsRegex;
+    var filterValue = '*'; // Default filter to show all
 
-	// use value of search field to filter
-	var $quicksearch = $("#id_search").keyup(
-		debounce(function() {
-			qsRegex = new RegExp($quicksearch.val(), "gi");
-			$grid.isotope();
+    // Function to handle filtering and hash update
+    function applyFilter() {
+        var searchValue = $('#id_search').val();
+        qsRegex = searchValue ? new RegExp(searchValue, 'gi') : null;
 
-			// display message box if no filtered items
+        // Apply Isotope filtering
+        $grid.isotope({
+            filter: function() {
+                var $this = $(this);
+                var matchesSearch = qsRegex ? $this.text().match(qsRegex) : true;
+                var matchesFilter = $this.is(filterValue);
+                return matchesSearch && matchesFilter;
+            }
+        });
 
-			if (!$grid.data("isotope").filteredItems.length) {
-				$("#noResult").show();
-			} else {
-				$("#noResult").hide();
-			}
-		})
-	);
+        // Update the URL hash
+        updateHash(filterValue, searchValue);
+    }
 
-	// debounce so filtering doesn't happen every millisecond
-	function debounce(fn, threshold) {
-		var timeout;
-		return function debounced() {
-			if (timeout) {
-				clearTimeout(timeout);
-			}
-			function delayed() {
-				fn();
-				timeout = null;
-			}
-			setTimeout(delayed, threshold || 100);
-		};
-	}
+    // Filter buttons functionality
+    $('#filters').on('click', 'button', function() {
+        filterValue = $(this).attr('data-filter');
+        applyFilter();
+    });
 
-	$("#filters a.button").click(function(event) {
-		event.preventDefault();
-	});
+    // Search submit button functionality
+    $('#search-form').on('submit', function(event) {
+        event.preventDefault(); // Prevent form submission reload
+        applyFilter();
+    });
 
-	// Filter based on URL hash
+    // Listen for "Enter" key on the quicksearch input
+    $('#id_search').on('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission on Enter
+            applyFilter();
+        }
+    });
 
-	// 1. Wire filter buttons to generate URL hash, ie "...#filter=.design"
-	// 2. Monitor changes to URL hash and trigger a function.
-	// 3. Grab filter value from URL hash.
-	// 4. Pass filter value to Isotope to repaint.
+    // Get current filter and search from hash
+    function getHashFilter() {
+        var matches = location.hash.match(/filter=([^&]+)/i);
+        return matches ? decodeURIComponent(matches[1]) : '*';
+    }
 
-	// Wire filter buttons to generate URL hash, ie "...#filter=.design"
-	$("#filters a.button").on("click", function() {
-		if ($(this).hasClass("is-checked")) {
-			$(this).removeClass("is-checked");
-			location.hash = "filter=*";
-		} else {
-			//$('#filters a.button').removeClass('checked');
-			var filterAttr = $(this).attr("data-filter");
-			location.hash = "filter=" + encodeURIComponent(filterAttr);
-			//$(this).addClass('checked');
-		}
-	});
+    function getHashSearch() {
+        var matches = location.hash.match(/search=([^&]+)/i);
+        return matches ? decodeURIComponent(matches[1]) : '';
+    }
 
-	// Pass filter value to Isotope to repaint.
-	function onHashChange() {
-		hashFilter = getHashFilter();
+    // Update URL hash
+    function updateHash(filter, search) {
+        var hash = 'filter=' + encodeURIComponent(filter);
+        if (search) {
+            hash += '&search=' + encodeURIComponent(search);
+        }
+        location.hash = hash;
+    }
 
-		if (hashFilter) {
-			$("#filters")
-				.find("a.is-checked")
-				.removeClass("is-checked");
-			$("#filters")
-				.find('[data-filter="' + hashFilter + '"]')
-				.addClass("is-checked");
-			$grid.isotope();
-		}
-	} // onHashChange
+    // Apply filters and search from hash on page load or hash change
+    function applyFiltersFromHash() {
+        filterValue = getHashFilter();
+        var searchValue = getHashSearch();
+        $('#id_search').val(searchValue); // Set the search input to the value from hash
+        qsRegex = searchValue ? new RegExp(searchValue, 'gi') : null;
 
-	// Grab filter value from URL hash.
-	function getHashFilter() {
-		var currentHash = location.hash.match(/filter=([^&]+)/i);
-		var filterValue = currentHash && currentHash[1];
-		return filterValue;
-	}
+        $grid.isotope({
+            filter: function() {
+                var $this = $(this);
+                var matchesSearch = qsRegex ? $this.text().match(qsRegex) : true;
+                var matchesFilter = $this.is(filterValue);
+                return matchesSearch && matchesFilter;
+            }
+        });
+    }
 
-	onHashChange();
-	// Run onHashChange any time the URL hash changes
-	window.onhashchange = onHashChange;
+    // On hash change, reapply filters
+    $(window).on('hashchange', applyFiltersFromHash);
 
-	(function($) {
-		var $doc = $(document),
-			$win = $(window);
+    // On page load, apply filters from hash
+    $(document).ready(function() {
+        applyFiltersFromHash();
+    });
 
-		$win.on("load", function() {
-			// document is fully loaded
 
-			$("#isotope-list").isotope();
-			// set timeout to fake 1 sec loading
-			setTimeout(function() {
-				$("#isotope-list").removeClass("loading");
-			}, 1000);
-		});
-	})(jQuery);
+    (function($) {
+        var $doc = $(document),
+            $win = $(window);
+
+        $win.on("load", function() {
+            // document is fully loaded
+
+            $("#isotope-list").isotope();
+            // set timeout to fake 1 sec loading
+            setTimeout(function() {
+                $("#isotope-list").removeClass("loading");
+            }, 1000);
+        });
+    })(jQuery);
+
+    // change is-checked class on buttons
+    var buttonGroups = document.querySelectorAll('#filters');
+    for (var i = 0, len = buttonGroups.length; i < len; i++) {
+        var buttonGroup = buttonGroups[i];
+        radioButtonGroup(buttonGroup);
+    }
+
+    function radioButtonGroup(buttonGroup) {
+        buttonGroup.addEventListener('click', function(event) {
+            // only work with buttons
+            if (!matchesSelector(event.target, 'button')) {
+                return;
+            }
+            buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+            event.target.classList.add('is-checked');
+        });
+    }
 });

@@ -52,7 +52,7 @@ html {
 }
 
 h1 {
-	@apply font-serif font-normal;
+	@apply font-serifbold font-normal;
 }
 h2,
 h3,
@@ -1063,31 +1063,53 @@ ul.page-numbers li .page-numbers.current {
 	box-shadow: inset 0 0 0 6px #002d72, inset 0 0 0 12px #68ace5;
 }
 
-.study-fields a.button {
-	@apply font-semi py-2 px-2 mr-4 border-solid border text-center rounded-md;
+.study-fields button {
+	@apply font-semi py-2 px-2 mr-4 border-solid border text-center;
 }
+
+.study-fields button::-moz-focus-inner {
+	@apply border-solid border-2;
+  }
+
+.study-fields #search-form button {
+	@apply mr-0 py-1;
+}
+
+.study-fields #search-form input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-left: .4em;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+    cursor: pointer;
+}
+
 
 .site-main .study-fields a {
 	color: inherit;
 }
 
-.study-fields a.all.button, .study-fields a.undergrad.button {
+.study-fields button.all, .study-fields button.undergrad {
 	@apply text-white;
 }
 
-.study-fields a.all.button:hover, .study-fields a.undergrad.button:hover {
+.study-fields button.all:hover, .study-fields button.undergrad:hover {
 	@apply text-black;
 }
 
-.study-fields a.undergrad.button.is-checked {
+.study-fields button.all.is-checked {
+	@apply bg-white text-black;
+}
+
+.study-fields button.undergrad.is-checked {
 	@apply bg-white text-blue border-solid border-secondary;
 }
 
-.study-fields a.full-time.button.is-checked {
+.study-fields button.full-time.is-checked {
 	@apply bg-white text-black border-solid border-blue-light;
 }
 
-.study-fields a.part-time.button.is-checked {
+.study-fields button.part-time.is-checked {
 	@apply bg-white text-black border-solid border-blue-lightest;
 }
 
