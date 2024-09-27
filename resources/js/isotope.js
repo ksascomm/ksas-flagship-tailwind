@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 
     // Function to handle filtering and hash update
     function applyFilter() {
-        var searchValue = $('#id_search').val();
+        var searchValue = $('#search-input').val();
         qsRegex = searchValue ? new RegExp(searchValue, 'gi') : null;
 
         // Apply Isotope filtering
@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
     }
 
     // Filter buttons functionality
-    $('#filters').on('click', 'button', function() {
+    $('#isotope-filters').on('click', 'button', function() {
         filterValue = $(this).attr('data-filter');
         applyFilter();
     });
@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
     });
 
     // Listen for "Enter" key on the quicksearch input
-    $('#id_search').on('keypress', function(event) {
+    $('#search-input').on('keypress', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault(); // Prevent form submission on Enter
             applyFilter();
@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
     function applyFiltersFromHash() {
         filterValue = getHashFilter();
         var searchValue = getHashSearch();
-        $('#id_search').val(searchValue); // Set the search input to the value from hash
+        $('#search-input').val(searchValue); // Set the search input to the value from hash
         qsRegex = searchValue ? new RegExp(searchValue, 'gi') : null;
 
         $grid.isotope({
@@ -118,7 +118,7 @@ jQuery(document).ready(function($) {
     })(jQuery);
 
     // change is-checked class on buttons
-    var buttonGroups = document.querySelectorAll('#filters');
+    var buttonGroups = document.querySelectorAll('#isotope-filters');
     for (var i = 0, len = buttonGroups.length; i < len; i++) {
         var buttonGroup = buttonGroups[i];
         radioButtonGroup(buttonGroup);
@@ -134,4 +134,49 @@ jQuery(document).ready(function($) {
             event.target.classList.add('is-checked');
         });
     }
+	(function() {
+		// Set searchField to the search input field.
+		// Set timeout to the time you want to wait after the last character in milliseconds.
+		// Set minLength to the minimum number of characters that constitutes a valid search.
+		var searchField = document.querySelector('#search-input'),
+			timeout = 2000,
+			minLength = 3;
+	
+		var textEntered = false;
+	
+		var timer, searchText;
+		
+		var handleInput = function() {
+		  searchText = searchField ? searchField.value : '';
+		  if (searchText.length < minLength) {
+			return;
+		  }
+		  window.dataLayer.push({
+			'event': 'studyfieldsInput',
+			'searchTerm': searchText
+		  });
+		  textEntered = false;
+		};
+		
+		var startTimer = function(e) {
+		  textEntered = true;
+		  window.clearTimeout(timer);
+		  if (e.keyCode === 13) {
+			handleInput();
+			return;
+		  }
+		  timer = setTimeout(handleInput, timeout);
+		};
+		
+		if (searchField !== null) {
+		  searchField.addEventListener('keydown', startTimer, true);
+		  searchField.addEventListener('blur', function() {
+			if (textEntered) {
+			  window.clearTimeout(timer);
+			  handleInput();
+			}
+		  }, true);
+		}
+	  })();
 });
+

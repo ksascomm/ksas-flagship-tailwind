@@ -50,18 +50,19 @@ get_header();
 		?>
 
 		<div class="study-fields bg-grey-lightest border-solid border-grey border-2 p-4 mb-4" role="region" aria-label="Filters">
-			<div class="flex flex-col md:flex-row" id="filters">
+		<h3 class="pb-4 text-2xl font-heavy font-bold">Filter our fields of study by program type</h3>
+			<div class="flex flex-col md:flex-row" id="isotope-filters">
 				<button class="all bg-primary text-white hover:bg-white hover:text-primary is-checked" data-filter="*" aria-label="View All Programs">View All</a>
 				<button class="undergrad bg-secondary text-white hover:bg-white hover:text-secondary" data-filter=".undergrad_program" aria-label="Sort Undergraduate Programs">Undergraduate</a>
 				<button class="full-time bg-blue-light text-primary hover:bg-white hover:text-primary hover:border-blue-light" data-filter=".full_time_program" aria-label="Sort Master's & Doctorates Programs">Master's & Doctorates</a>
 				<button class="part-time button bg-blue-lightest text-primary hover:bg-white hover:text-primary hover:border-blue-lighest" data-filter=".part_time_program" aria-label="Sort Professional Master’s and Certificates (AAP)">Professional Master’s and Certificates (AAP)</a>
 			</div>
-			<div class="py-4 text-2xl font-heavy font-bold">
-				<label class="heading" for="id_search">Search our fields of study by keyword:</label>
+			<div class="pt-8 pb-4 text-2xl font-heavy font-bold">
+				<label class="heading" for="search-input">Search by major/minor name, area of study, or description</label>
 			</div>
 			<div class="w-auto">
 				<form id="search-form">
-					<input class="w-3/4 lg:w-7/12 quicksearch rounded-r-lg p-2 border-t border-b border-r bg-white" type="search" name="search" id="id_search" aria-label="Search Fields of Study" placeholder="Enter major/minor, area of study, or description keyword"/>
+					<input class="w-3/4 lg:w-7/12 quicksearch rounded-r-lg p-2 border-t border-b border-r bg-white" type="search" name="search" id="search-input" aria-label="Search Fields of Study" placeholder="Enter major/minor name, area of study, or description keyword"/>
 					<button type="submit" id="search-button">Search</button>
 				</form>
 			</div>
