@@ -3,135 +3,58 @@
  *
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
+ * 
+ * @link https://medium.com/@bogdanfromkyiv/enhancing-web-accessibility-locking-the-tab-button-within-modals-and-menus-cb1ad3b7eff1
+ * @link https://codepen.io/bogdanfromkyiv/pen/gOQjmPg
  */
-( function() {
-	const siteNavigation = document.getElementById( 'site-navigation' );
+// Get the menu button element
+const menuBtn = document.querySelector(".menu-btn");
 
-	// Return early if the navigation don't exist.
-	if ( ! siteNavigation ) {
-		return;
-	}
+// Get the close menu button element
+const closeMenuBtn = document.querySelector(".close-btn");
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+// Get the fullscreen menu element
+const fullscreenMenu = document.getElementById("fullscreenMenu");
 
-	// Return early if the button don't exist.
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
-
-	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	if ( ! menu.classList.contains( 'nav-menu' ) ) {
-		menu.classList.add( 'nav-menu' );
-	}
-
-	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
-	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
-
-		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			button.setAttribute( 'aria-expanded', 'true' );
-		}
-	} );
-
-	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
-
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
-
-	// Get all the link elements within the menu.
-	const links = menu.getElementsByTagName( 'a' );
-
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll(
-		'.menu-item-has-children > a, .page_item_has_children > a'
-	);
-
-	// Toggle focus each time a menu link is focused or blurred.
-	for ( const link of links ) {
-		link.addEventListener( 'focus', toggleFocus, true );
-		link.addEventListener( 'blur', toggleFocus, true );
-	}
-
-	// Toggle focus each time a menu link with children receive a touch event.
-	for ( const link of linksWithChildren ) {
-		link.addEventListener( 'touchstart', toggleFocus, false );
-	}
-
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		if ( event.type === 'focus' || event.type === 'blur' ) {
-			let self = this;
-			// Move up through the ancestors of the current link until we hit .nav-menu.
-			while ( ! self.classList.contains( 'nav-menu' ) ) {
-				// On li elements toggle the class .focus.
-				if ( 'li' === self.tagName.toLowerCase() ) {
-					self.classList.toggle( 'focus' );
-				}
-				self = self.parentNode;
-			}
-		}
-
-		if ( event.type === 'touchstart' ) {
-			const menuItem = this.parentNode;
-			event.preventDefault();
-			for ( const link of menuItem.parentNode.children ) {
-				if ( menuItem !== link ) {
-					link.classList.remove( 'focus' );
-				}
-			}
-			menuItem.classList.toggle( 'focus' );
-		}
-	}
-}() );
-
-//Overlay Navigation
-const openBtn = document.querySelector( '.openSideNav' );
-openBtn.addEventListener( 'click', () => {
-	openNav();
-} );
-const closeBtn = document.querySelector( '.closeBtn' );
-closeBtn.addEventListener( 'click', () => {
-	closeNav();
-} );
-
-function openNav() {
-	document.querySelector( '.site-navigation' ).style.height = '100%';
-	document.querySelector( '.site-navigation' ).style.display = 'block';
-	document.querySelector( '.site-navigation' ).setAttribute( 'aria-hidden', 'false' );
-	document.documentElement.style.overflow = 'hidden';
-	document.body.scroll = 'no';
+// Function to toggle the menu
+function toggleMenu() {
+  fullscreenMenu.classList.toggle("active");
+  menuBtn.classList.toggle("active");
 }
-function closeNav() {
-	document.querySelector( '.site-navigation' ).style.height = '0';
-	document.querySelector( '.site-navigation' ).style.display = 'none';
-	document.querySelector( '.site-navigation' ).setAttribute( 'aria-hidden', 'true' );
-	document.documentElement.style.overflow = 'scroll';
-	document.body.scroll = 'yes';
 
-}
-jQuery( document ).ready( function( $ ) {
-	$( '.openSideNav' ).on( 'click', function( e ) {
-		e.preventDefault();
-		$( '.overlay' ).addClass( 'active' );
-	} );
-	$( '.closeBtn' ).on( 'click', function( e ) {
-		e.preventDefault();
-		$( '.overlay' ).removeClass( 'active' );
-	} );
-} );
+// Add event listener to the menu button for the 'click' event
+menuBtn.addEventListener("click", toggleMenu);
+closeMenuBtn.addEventListener("click", toggleMenu);
+
+// Add event listener to the 'keydown' event on the document
+document.addEventListener("keydown", function (e) {
+  const target = e.target;
+  const shiftPressed = e.shiftKey;
+
+  // If TAB key pressed
+  if (e.keyCode === 9) {
+    // If inside a fullscreen menu (determined by attribute role="dialog")
+    if (target.closest('[role="dialog"]')) {
+      // Find the first or the last input element in the dialog parent (depending on whether Shift was pressed).
+      // Get the focusable elements (links and buttons)
+      let focusElements = target
+        .closest('[role="dialog"]')
+        .querySelectorAll("a[href], button");
+      let borderElem = shiftPressed
+        ? focusElements[0]
+        : focusElements[focusElements.length - 1];
+
+      if (borderElem) {
+        // If the current target element is the first or last focusable element in the dialog, prevent the default behaviour.
+        if (target === borderElem) {
+          e.preventDefault();
+
+          // move focus to the first element when the last one is reached and vice versa
+          borderElem === focusElements[0]
+            ? focusElements[focusElements.length - 1].focus()
+            : focusElements[0].focus();
+        }
+      }
+    }
+  }
+});

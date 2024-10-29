@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="sm:mb-0 self-center text-lg font-sans">
-			<div class="flex flex-col md:flex-row-reverse lg:my-8 lg:px-2">
+			<div class="flex flex-col md:flex-row-reverse my-4 lg:my-8 lg:px-2">
 				<a class="py-2 px-3 hover:bg-blue-light sm:my-4 md:my-0 text-base text-center" href="/academics/apply/">Admissions <span class="fa-solid fa-landmark-dome"></span></a>
 				<div class="lg:mr-4">
 					<form method="GET" action="<?php echo esc_url( site_url( '/search' ) ); ?>" role="search" aria-label="Site Search" class="bg-white shadow-sm site-search sm:mb-2 lg:mb-0">
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div role="navigation">
-				<ul id="default-menu" class="flex text-white flex-col md:flex-row" aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>">
+				<ul id="default-menu" class="flex text-white flex-col md:flex-row mt-6 lg:mt-0" aria-label="<?php _e( 'Main Menu', 'textdomain' ); ?>">
 					<li class="grow lg:mr-2">
 						<a href="<?php echo esc_url( site_url( '/academics/departments-programs-and-centers/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Departments & Programs</a>
 					</li>
@@ -66,7 +66,7 @@
 						<a href="<?php echo esc_url( site_url( '/academics/fields/' ) ); ?>" class="text-center block hover:bg-blue-light py-2 px-4 ">Fields of Study</a>
 					</li>
 					<li class="grow lg:mr-2">
-						<button class="text-center block openSideNav hover:bg-blue-light py-2 px-4 border-transparent  active:bg-blue-light focus:outline-none focus:ring focus:ring-blue-light hover:border-transparent" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fa-solid fa-bars"></span></button>
+						<button class="mx-auto block menu-btn hover:bg-blue-light py-2 px-4 border-transparent  active:bg-blue-light focus:outline-none focus:ring focus:ring-blue-light hover:border-transparent" aria-label="Menu" aria-controls="offCanvasTop1">Menu <span class="fa-solid fa-bars"></span></button>
 					</li>
 				</ul>
 			</div>
@@ -75,8 +75,11 @@
 		<!-- .site-branding -->
 
 
-		<nav class="text-white overlay site-navigation" role="navigation" id="offCanvasTop1">
-			<button class="closeBtn" aria-label="Close menu" type="button"><span class="fa-solid fa-square-xmark"></span></button>
+		<nav class="menu site-navigation overlay" role="dialog" id="fullscreenMenu">
+			<button class="close-btn border border-white" aria-label="Close">
+				Close
+				<span class="text-2xl" aria-hidden="true">×</span>
+			</button>
 			<?php
 			wp_nav_menu(
 				array(

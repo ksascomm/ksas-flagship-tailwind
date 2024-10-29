@@ -563,6 +563,11 @@ dl dt {
 	border-radius: 2%;
 }
 
+.site-navigation button.close-btn:hover,
+.site-navigation button.close-btn:focus {
+	@apply bg-blue-light;
+}
+
 .site-navigation .main-navigation {
 	@apply flex;
 }
@@ -623,7 +628,56 @@ dl dt {
 .site-search input[type="text"] {
 	@apply border-none text-grey-darkest;
 }
+.menu {
+	@apply overflow-y-hidden;
+	transition: 0.5s;
+	-webkit-transform: scale(0);
+    transform: scale(0);
+	opacity: 0;
+	-webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+	transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #002d72;
+	padding: 20px;
+	z-index: 999;
+	opacity: 0;
+  }
+  .menu.active {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #002d72;
+	padding: 20px;
+	z-index: 999;
+	-webkit-transform: scale(1);
+			transform: scale(1);
+	opacity: 1;
+	webkit-animation: anim .3s ease-in-out;
+			animation: anim .3s ease-in-out;
+  }
+  
+  .close-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 24px;
+	background: transparent;
+  }
 
+/*
 .overlay {
 	@apply h-0 w-full fixed z-10 top-0 left-0 bg-secondary overflow-y-hidden;
 	transition: 0.5s;
@@ -635,7 +689,7 @@ dl dt {
 	transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 	transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
-
+/*
 .overlay.active {
 	display: block;
 	-webkit-transform: scale(1);
@@ -643,7 +697,7 @@ dl dt {
 	opacity: 1;
 	webkit-animation: anim .3s ease-in-out;
 			animation: anim .3s ease-in-out;
-}
+}*/
 
 .overlay-content {
 	@apply relative w-full mt-16 top-0;

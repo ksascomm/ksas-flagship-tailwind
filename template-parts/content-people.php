@@ -61,9 +61,10 @@
 			if ( get_post_meta( $post->ID, 'ecpt_email', true ) ) :
 				$email = get_post_meta( $post->ID, 'ecpt_email', true );
 				?>
-				<span class="fa-solid fa-envelope" aria-hidden="true"></span> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge( $email ); ?>">
-
-					<?php echo email_munge( $email ); ?> </a><br>
+				<span class="fa-solid fa-envelope" aria-hidden="true"></span>
+				<a href="<?php echo esc_url( 'mailto:' . antispambot( $email ) ); ?>">
+					<?php echo esc_html( $email ); ?>
+				</a>
 			<?php endif; ?>
 		</div>
 		<?php if ( is_singular( 'people' ) ) : ?>
