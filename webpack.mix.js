@@ -21,8 +21,9 @@ const TailwindExtractor = (content) => {
   ========================================================================== */
 mix
 	// handle JS files
-	.js("resources/js/app.js", "dist/js/bundle.min.js")
+	.scripts(["resources/js/twentytwenty.js", "resources/js/isotope.js","resources/js/tabs.js", "resources/js/navigation.js"], "dist/js/bundle.min.js")
 	//.disableNotifications()
+  
 
 	.postCss( "./resources/css/style.css", "./dist/css/style.css", [
 			require('tailwindcss')("./tailwind.config.js")

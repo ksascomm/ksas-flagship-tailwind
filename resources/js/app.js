@@ -2,6 +2,7 @@
   App.js
   ========================================================================== */
 
-import "./navigation.js";
+//import "./navigation.js";
 import "./isotope.js";
 import "./tabs.js";
+import "./twentytwenty.js";

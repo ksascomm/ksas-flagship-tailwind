@@ -164,3 +164,112 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+/**
+ * Filters the archive title and styles the word before the first colon.
+ *
+ * @param string $title Current archive title.
+ * @return string Current archive title.
+ */
+function twentytwenty_get_the_archive_title( $title ) {
+
+	$regex = apply_filters(
+		'twentytwenty_get_the_archive_title_regex',
+		array(
+			'pattern'     => '/(\A[^\:]+\:)/',
+			'replacement' => '<span class="color-accent">$1</span>',
+		)
+	);
+
+	if ( empty( $regex ) ) {
+
+		return $title;
+
+	}
+
+	return preg_replace( $regex['pattern'], $regex['replacement'], $title );
+
+}
+
+add_filter( 'get_the_archive_title', 'twentytwenty_get_the_archive_title' );
+
+/**
+ * Toggles animation duration in milliseconds.
+ *
+ * @return int Duration in milliseconds
+ */
+function twentytwenty_toggle_duration() {
+	/**
+	 * Filters the animation duration/speed used usually for submenu toggles.
+	 *
+	 * @since Twenty Twenty 1.0
+	 *
+	 * @param int $duration Duration in milliseconds.
+	 */
+	$duration = apply_filters( 'twentytwenty_toggle_duration', 250 );
+
+	return $duration;
+}
+
+/**
+ * Adds a Sub Nav Toggle to the Expanded Menu and Mobile Menu.
+ *
+ * @param stdClass $args  An object of wp_nav_menu() arguments.
+ * @param WP_Post  $item  Menu item data object.
+ * @param int      $depth Depth of menu item. Used for padding.
+ * @return stdClass An object of wp_nav_menu() arguments.
+ */
+function twentytwenty_add_sub_toggles_to_main_menu( $args, $item, $depth ) {
+
+	// Add sub menu toggles to the Expanded Menu with toggles.
+	if ( isset( $args->show_toggles ) && $args->show_toggles ) {
+
+		// Wrap the menu item link contents in a div, used for positioning.
+		$args->before = '<div class="ancestor-wrapper">';
+		$args->after  = '';
+
+		// Add a toggle to items with children.
+		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+
+			$toggle_target_string = '.menu-modal .menu-item-' . $item->ID . ' > .sub-menu';
+			$toggle_duration      = twentytwenty_toggle_duration();
+
+			// Add the sub menu toggle.
+			$args->after .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false" type="button"><span class="sr-only">' . __( 'Show sub menu', 'ksas-blocks' ) . '</span>' . twentytwenty_get_theme_svg( 'chevron-down' ) . '</button>';
+
+		}
+
+		// Close the wrapper.
+		$args->after .= '</div><!-- .ancestor-wrapper -->';
+
+	}
+
+	return $args;
+
+}
+
+add_filter( 'nav_menu_item_args', 'twentytwenty_add_sub_toggles_to_main_menu', 10, 3 );
+
+/**
+ * Displays SVG icons in social links menu.
+ *
+ * @param string   $item_output The menu item's starting HTML output.
+ * @param WP_Post  $item        Menu item data object.
+ * @param int      $depth       Depth of the menu. Used for padding.
+ * @param stdClass $args        An object of wp_nav_menu() arguments.
+ * @return string The menu item output with social icon.
+ */
+function twentytwenty_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+	// Change SVG icon inside social links menu if there is supported URL.
+	if ( 'social' === $args->theme_location ) {
+		$svg = TwentyTwenty_SVG_Icons::get_social_link_svg( $item->url );
+		if ( empty( $svg ) ) {
+			$svg = twentytwenty_get_theme_svg( 'link' );
+		}
+		$item_output = str_replace( $args->link_after, '</span>' . $svg, $item_output );
+	}
+
+	return $item_output;
+}
+
+add_filter( 'walker_nav_menu_start_el', 'twentytwenty_nav_menu_social_icons', 10, 4 );

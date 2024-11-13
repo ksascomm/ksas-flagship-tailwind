@@ -9,7 +9,7 @@
 
 if ( ! defined( 'FLAGSHIP_TAILWIND_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FLAGSHIP_TAILWIND_VERSION', '4.3.0' );
+	define( 'FLAGSHIP_TAILWIND_VERSION', '5.0.0' );
 }
 
 if ( ! function_exists( 'flagship_tailwind_setup' ) ) :
@@ -195,6 +195,17 @@ require get_template_directory() . '/inc/pagination.php';
  * Sidebar Navigation
  */
 require get_template_directory() . '/inc/sidebar-walker.php';
+
+/**
+ * Handle SVG icons
+ */
+require get_template_directory() . '/inc/class-twentytwenty-svg-icons.php';
+require get_template_directory() . '/inc/svg-icons.php';
+
+/**
+ * Custom script loader class
+ */
+require get_template_directory() . '/inc/class-twentytwenty-script-loader.php';
 
 /**
  * Gutenberg Editor
