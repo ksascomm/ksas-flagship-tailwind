@@ -38,8 +38,8 @@
 				<div class="header-titles sm:grid sm:grid-cols-1 sm:gap-x-12 lg:flex lg:justify-between">
 					<div class="flex flex-col md:flex-row self-center">
 						<div class="h-auto shield mx-auto mb-4 lg:mb-0">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Krieger School of Arts & Sciences">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.logo.cropped.svg" class="h-auto w-full p-5" alt="KSAS Shield">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/krieger.logo.cropped.svg" class="h-auto w-full p-5" alt="KSAS Shield, to the homepage">
 							</a>
 						</div>
 					</div>

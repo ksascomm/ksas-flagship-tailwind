@@ -8,7 +8,7 @@
  */
 
 // Get the Feature taxonomy ID.
-$latest_student_research_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=366&categories=351';
+$latest_student_research_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=369&categories=351';
 
 if ( false === ( $latest_student_research = get_transient( 'asmagazine_student_research_query' ) ) ) {
 	$latest_student_research = wp_remote_get( $latest_student_research_url );

@@ -8,7 +8,7 @@
  */
 
 // Get the Feature taxonomy ID.
-	$latest_oncampus_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=366&categories=350';
+	$latest_oncampus_url = 'https://magazine.krieger.jhu.edu/wp-json/wp/v2/posts?_fields=title,link,excerpt&volume=369&categories=350';
 
 if ( false === ( $latest_oncampus = get_transient( 'asmagazine_oncampus_query' ) ) ) {
 	$latest_oncampus = wp_remote_get( $latest_oncampus_url );
