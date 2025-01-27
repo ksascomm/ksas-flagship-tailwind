@@ -45,7 +45,7 @@
 			<div class="social-media m-4 col-span-4 lg:col-span-1">
 				<a href="https://facebook.com/JHUArtsSciences"><span class="fa-brands fa-facebook fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Follow us on Facebook</span></a>
 				<a href="https://www.instagram.com/JHUArtsSciences/"><span class=" fab fa-instagram fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Follow us on Instagram</span></a>
-				<a href="https://x.com/JHUArtsSciences"><span class="fa-brands fa-x-twitter fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Follow us on X</span></a>
+				<a href="https://bsky.app/profile/jhuartssciences.bsky.social"><span class="fa-brands fa-bluesky fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Follow us on Bluesky</span></a>
 				<a href="https://www.youtube.com/user/jhuksas"><span class="fa-brands fa-youtube fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Follow us on YouTube</span></a>
 				<a href="https://www.tiktok.com/@jhuartssciences"><span class="fa-brands fa-tiktok fa-2x hover:text-blue-light"></span><span class="screen-reader-text">Follow us on TikTok</span></a>
 			</div>
